@@ -53,6 +53,7 @@ const TOKEN_TREE_NON_SPECIAL_PUNCTUATION = [
   '>>', '+=', '-=', '*=', '/=', '%=', '^=', '&=', '|=', '<<=',
   '>>=', '=', '==', '!=', '>', '<', '>=', '<=', '@', '_', '.',
   '..', '...', '..=', ',', ';', ':', '::', '->', '=>', '#', '?',
+  '<==', '==>', '<==>', '=~=',
 ];
 
 const primitiveTypes = numericTypes.concat(['bool', 'str', 'char']);
@@ -111,6 +112,9 @@ module.exports = grammar({
     [$.array_expression],
     [$.visibility_modifier],
     [$.visibility_modifier, $.scoped_identifier, $.scoped_type_identifier],
+    [$.while_expression, $._expression_except_range],
+    [$.for_expression, $._expression_except_range],
+    [$.function_item, $._expression_except_range],
   ],
 
   word: $ => $.identifier,
@@ -241,7 +245,8 @@ module.exports = grammar({
       '\'',
       'as', 'async', 'await', 'break', 'const', 'continue', 'default', 'enum', 'fn', 'for', 'gen',
       'if', 'impl', 'let', 'loop', 'match', 'mod', 'pub', 'return', 'static', 'struct', 'trait',
-      'type', 'union', 'unsafe', 'use', 'where', 'while',
+      'type', 'union', 'unsafe', 'use', 'where', 'while', 'spec', 'proof', 'verus', 'requires', 'ensures',
+      'lemma', 'forall', 'exists', 'increases', 'decreases', 'trigger', 'open',
     ),
 
     // Section - Declarations
@@ -254,8 +259,9 @@ module.exports = grammar({
     ),
 
     inner_attribute_item: $ => seq(
-      '#',
-      '!',
+      // '#',
+      // '!',
+      choice(seq('#', '!'), '#!'),
       '[',
       $.attribute,
       ']',
@@ -439,8 +445,33 @@ module.exports = grammar({
       field('name', choice($.identifier, $.metavariable)),
       field('type_parameters', optional($.type_parameters)),
       field('parameters', $.parameters),
-      optional(seq('->', field('return_type', $._type))),
+      optional(seq('->', choice(
+          field('return_type', $._type),
+          seq('(', field('name', $.identifier), ':', field('return_type', $._type), ')'),
+        )
+      )),
       optional($.where_clause),
+      optional(field('recursion', seq(
+          choice('increases', 'decreases'),
+          sepBy1(',', $._expression),
+          optional(','),  
+          )      
+        )
+      ),
+      optional(field('precondition', seq(
+          'requires',
+          sepBy1(',', $._expression),
+          optional(','),  
+          )      
+        )
+      ),
+      optional(field('postcondition', seq(
+          'ensures',
+          sepBy1(',', $._expression),
+          optional(','),  
+          )      
+        )
+      ),
       field('body', $.block),
     ),
 
@@ -461,6 +492,9 @@ module.exports = grammar({
       'default',
       'const',
       'unsafe',
+      'proof',
+      'spec',
+      'open',
       $.extern_modifier,
     )),
 
@@ -896,6 +930,9 @@ module.exports = grammar({
       $.binary_expression,
       $.assignment_expression,
       $.compound_assignment_expr,
+      $.logic_entail_expression,
+      $.logic_pound_expression,
+      $.logic_predicate_expression,
       $.type_cast_expression,
       $.call_expression,
       $.return_expression,
@@ -930,6 +967,8 @@ module.exports = grammar({
 
     _expression_ending_with_block: $ => choice(
       $.unsafe_block,
+      $.verus_block,
+      $.proof_block,
       $.async_block,
       $.gen_block,
       $.try_block,
@@ -1055,7 +1094,39 @@ module.exports = grammar({
 
     compound_assignment_expr: $ => prec.left(PREC.assign, seq(
       field('left', $._expression),
-      field('operator', choice('+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=')),
+      field('operator', choice('+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '=~=')),
+      field('right', $._expression),
+    )),
+
+    logic_entail_expression: $ => prec.left(PREC.assign, seq(
+      field('left', $._expression),
+      field('operator', choice('==>', '<==', '<==>')),
+      field('right', $._expression),
+    )),
+
+    // logic_pound_expression: $ => prec.left(-2, seq(
+    //   choice($.attribute_item, $.inner_attribute_item),
+    //   field('right', $._expression),
+    // )),
+
+    logic_pound_expression: $ => prec.left(PREC.assign, seq(
+      choice('#', '#!'),
+      '[',
+      seq('trigger', optional($._expression)),
+      ']',
+      field('right', $._expression),
+    )),
+
+    logic_predicate_expression: $ => prec.left(PREC.assign, seq(
+      choice('forall', 'exists'),
+      '|',
+      sepBy(',', 
+        seq(
+          field('predicate', $.identifier),
+          optional(seq(':', field('type', $._type))),
+      )), 
+      optional(','),
+      '|',
       field('right', $._expression),
     )),
 
@@ -1236,7 +1307,14 @@ module.exports = grammar({
       optional(seq($.label, ':')),
       'while',
       field('condition', $._condition),
-      field('body', $.block),
+      optional(field('invariant', seq(
+          'invariant',
+          sepBy1(',', $._expression),
+          optional(','),  
+          )      
+        )
+      ),
+    field('body', $.block),
     ),
 
     loop_expression: $ => seq(
@@ -1251,6 +1329,13 @@ module.exports = grammar({
       field('pattern', $._pattern),
       'in',
       field('value', $._expression),
+      optional(field('invariant', seq(
+          'invariant',
+          sepBy1(',', $._expression),
+          optional(','),  
+          )      
+        )
+      ),
       field('body', $.block),
     ),
 
@@ -1306,6 +1391,17 @@ module.exports = grammar({
 
     unsafe_block: $ => seq(
       'unsafe',
+      $.block,
+    ),
+
+    verus_block: $ => seq(
+      'verus',
+      '!',
+      $.block,
+    ),
+
+    proof_block: $ => seq(
+      'proof',
       $.block,
     ),
 
@@ -1592,7 +1688,7 @@ module.exports = grammar({
       $._reserved_identifier,
     ),
 
-    identifier: _ => /(r#)?[_\p{XID_Start}][_\p{XID_Continue}]*/,
+    identifier: _ => /(r#)?[_\p{XID_Start}][_\p{XID_Continue}]*@?/,
 
     shebang: _ => /#![\s]*[^\[].+/,
 
