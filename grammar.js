@@ -114,7 +114,7 @@ module.exports = grammar({
     [$.visibility_modifier, $.scoped_identifier, $.scoped_type_identifier],
     [$.while_expression, $._expression_except_range],
     [$.for_expression, $._expression_except_range],
-    [$.function_item, $._expression_except_range],
+    // [$.function_item, $._expression_except_range],
   ],
 
   word: $ => $.identifier,
@@ -246,7 +246,7 @@ module.exports = grammar({
       'as', 'async', 'await', 'break', 'const', 'continue', 'default', 'enum', 'fn', 'for', 'gen',
       'if', 'impl', 'let', 'loop', 'match', 'mod', 'pub', 'return', 'static', 'struct', 'trait',
       'type', 'union', 'unsafe', 'use', 'where', 'while', 'spec', 'proof', 'verus', 'requires', 'ensures',
-      'lemma', 'forall', 'exists', 'increases', 'decreases', 'trigger', 'open',
+      'lemma', 'forall', 'exists', 'increases', 'decreases', 'trigger', 'open', 'ghost', 'recommends',
     ),
 
     // Section - Declarations
@@ -451,27 +451,7 @@ module.exports = grammar({
         )
       )),
       optional($.where_clause),
-      optional(field('recursion', seq(
-          choice('increases', 'decreases'),
-          sepBy1(',', $._expression),
-          optional(','),  
-          )      
-        )
-      ),
-      optional(field('precondition', seq(
-          'requires',
-          sepBy1(',', $._expression),
-          optional(','),  
-          )      
-        )
-      ),
-      optional(field('postcondition', seq(
-          'ensures',
-          sepBy1(',', $._expression),
-          optional(','),  
-          )      
-        )
-      ),
+      prec.left(field('specifications', optional($.function_specifications))),
       field('body', $.block),
     ),
 
@@ -497,6 +477,18 @@ module.exports = grammar({
       'open',
       $.extern_modifier,
     )),
+
+    function_specifications: $ => repeat1(prec.left(seq(
+      field('spec_type', choice(
+        'requires',
+        'ensures',
+        'increases',
+        'decreases',
+        'recommends',
+      )),
+      sepBy1(',', $._expression_except_range),
+      optional(','),  
+    ))),
 
     where_clause: $ => prec.right(seq(
       'where',
@@ -618,6 +610,7 @@ module.exports = grammar({
 
     let_declaration: $ => seq(
       'let',
+      optional('ghost'),
       optional($.mutable_specifier),
       field('pattern', $._pattern),
       optional(seq(
@@ -1071,7 +1064,7 @@ module.exports = grammar({
         [PREC.bitand, '&'],
         [PREC.bitor, '|'],
         [PREC.bitxor, '^'],
-        [PREC.comparative, choice('==', '!=', '<', '<=', '>', '>=')],
+        [PREC.comparative, choice('==', '!=', '<', '<=', '>', '>=', '=~=')],
         [PREC.shift, choice('<<', '>>')],
         [PREC.additive, choice('+', '-')],
         [PREC.multiplicative, choice('*', '/', '%')],
@@ -1094,7 +1087,7 @@ module.exports = grammar({
 
     compound_assignment_expr: $ => prec.left(PREC.assign, seq(
       field('left', $._expression),
-      field('operator', choice('+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=', '=~=')),
+      field('operator', choice('+=', '-=', '*=', '/=', '%=', '&=', '|=', '^=', '<<=', '>>=')),
       field('right', $._expression),
     )),
 
