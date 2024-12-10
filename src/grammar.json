@@ -1188,6 +1188,10 @@
         },
         {
           "type": "STRING",
+          "value": "choose"
+        },
+        {
+          "type": "STRING",
           "value": "increases"
         },
         {
@@ -1204,11 +1208,19 @@
         },
         {
           "type": "STRING",
+          "value": "closed"
+        },
+        {
+          "type": "STRING",
           "value": "ghost"
         },
         {
           "type": "STRING",
           "value": "recommends"
+        },
+        {
+          "type": "STRING",
+          "value": "broadcast"
         }
       ]
     },
@@ -2679,6 +2691,14 @@
           {
             "type": "STRING",
             "value": "open"
+          },
+          {
+            "type": "STRING",
+            "value": "closed"
+          },
+          {
+            "type": "STRING",
+            "value": "broadcast"
           },
           {
             "type": "SYMBOL",
@@ -6615,6 +6635,10 @@
               {
                 "type": "STRING",
                 "value": "exists"
+              },
+              {
+                "type": "STRING",
+                "value": "choose"
               }
             ]
           },

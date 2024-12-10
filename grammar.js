@@ -246,7 +246,8 @@ module.exports = grammar({
       'as', 'async', 'await', 'break', 'const', 'continue', 'default', 'enum', 'fn', 'for', 'gen',
       'if', 'impl', 'let', 'loop', 'match', 'mod', 'pub', 'return', 'static', 'struct', 'trait',
       'type', 'union', 'unsafe', 'use', 'where', 'while', 'spec', 'proof', 'verus', 'requires', 'ensures',
-      'lemma', 'forall', 'exists', 'increases', 'decreases', 'trigger', 'open', 'ghost', 'recommends',
+      'lemma', 'forall', 'exists', 'choose', 'increases', 'decreases', 'trigger', 'open', 'closed',
+      'ghost', 'recommends', 'broadcast',
     ),
 
     // Section - Declarations
@@ -475,6 +476,8 @@ module.exports = grammar({
       'proof',
       'spec',
       'open',
+      'closed',
+      'broadcast',
       $.extern_modifier,
     )),
 
@@ -1111,7 +1114,7 @@ module.exports = grammar({
     )),
 
     logic_predicate_expression: $ => prec.left(PREC.assign, seq(
-      choice('forall', 'exists'),
+      choice('forall', 'exists', 'choose'),
       '|',
       sepBy(',', 
         seq(

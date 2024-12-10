@@ -5608,8 +5608,20 @@
     "named": false
   },
   {
+    "type": "broadcast",
+    "named": false
+  },
+  {
     "type": "char_literal",
     "named": true
+  },
+  {
+    "type": "choose",
+    "named": false
+  },
+  {
+    "type": "closed",
+    "named": false
   },
   {
     "type": "const",
