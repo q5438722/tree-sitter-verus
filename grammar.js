@@ -114,7 +114,6 @@ module.exports = grammar({
     [$.visibility_modifier, $.scoped_identifier, $.scoped_type_identifier],
     [$.while_expression, $._expression_except_range],
     [$.for_expression, $._expression_except_range],
-    // [$.function_item, $._expression_except_range],
   ],
 
   word: $ => $.identifier,
@@ -135,6 +134,7 @@ module.exports = grammar({
     expression_statement: $ => choice(
       seq($._expression, ';'),
       prec(1, $._expression_ending_with_block),
+      prec(2, $.by_expression),
     ),
 
     _declaration_statement: $ => choice(
@@ -247,7 +247,7 @@ module.exports = grammar({
       'if', 'impl', 'let', 'loop', 'match', 'mod', 'pub', 'return', 'static', 'struct', 'trait',
       'type', 'union', 'unsafe', 'use', 'where', 'while', 'spec', 'proof', 'verus', 'requires', 'ensures',
       'lemma', 'forall', 'exists', 'choose', 'increases', 'decreases', 'trigger', 'open', 'closed',
-      'ghost', 'recommends', 'broadcast',
+      'ghost', 'recommends', 'broadcast', 'by',
     ),
 
     // Section - Declarations
@@ -1332,6 +1332,12 @@ module.exports = grammar({
           )      
         )
       ),
+      field('body', $.block),
+    ),
+
+    by_expression: $ => seq(
+      field('target', $._expression),
+      'by',
       field('body', $.block),
     ),
 

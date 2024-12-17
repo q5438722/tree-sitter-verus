@@ -1030,6 +1030,32 @@
     }
   },
   {
+    "type": "by_expression",
+    "named": true,
+    "fields": {
+      "body": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "block",
+            "named": true
+          }
+        ]
+      },
+      "target": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "call_expression",
     "named": true,
     "fields": {
@@ -1706,6 +1732,10 @@
       "types": [
         {
           "type": "_expression",
+          "named": true
+        },
+        {
+          "type": "by_expression",
           "named": true
         }
       ]
@@ -5609,6 +5639,10 @@
   },
   {
     "type": "broadcast",
+    "named": false
+  },
+  {
+    "type": "by",
     "named": false
   },
   {

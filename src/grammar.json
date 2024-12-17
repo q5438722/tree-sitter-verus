@@ -67,6 +67,14 @@
             "type": "SYMBOL",
             "name": "_expression_ending_with_block"
           }
+        },
+        {
+          "type": "PREC",
+          "value": 2,
+          "content": {
+            "type": "SYMBOL",
+            "name": "by_expression"
+          }
         }
       ]
     },
@@ -1221,6 +1229,10 @@
         {
           "type": "STRING",
           "value": "broadcast"
+        },
+        {
+          "type": "STRING",
+          "value": "by"
         }
       ]
     },
@@ -8062,6 +8074,31 @@
               "type": "BLANK"
             }
           ]
+        },
+        {
+          "type": "FIELD",
+          "name": "body",
+          "content": {
+            "type": "SYMBOL",
+            "name": "block"
+          }
+        }
+      ]
+    },
+    "by_expression": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "FIELD",
+          "name": "target",
+          "content": {
+            "type": "SYMBOL",
+            "name": "_expression"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": "by"
         },
         {
           "type": "FIELD",
