@@ -481,7 +481,9 @@ module.exports = grammar({
       $.extern_modifier,
     )),
 
-    function_specifications: $ => repeat1(prec.left(seq(
+    function_specifications: $ => repeat1($._specification),
+
+    _specification: $ => prec.left(seq(
       field('spec_type', choice(
         'requires',
         'ensures',
@@ -491,7 +493,7 @@ module.exports = grammar({
       )),
       sepBy1(',', $._expression_except_range),
       optional(','),  
-    ))),
+    )),
 
     where_clause: $ => prec.right(seq(
       'where',
@@ -1338,7 +1340,17 @@ module.exports = grammar({
     by_expression: $ => seq(
       field('target', $._expression),
       'by',
-      field('body', $.block),
+      choice(
+        seq(
+          '(',
+          $.identifier,
+          ')',
+          // optional(field('specification', seq($._specification, ';'))),
+          optional(field('specification', $._specification)),
+          ';',
+        ),
+        field('body', $.block),
+      ),
     ),
 
     const_block: $ => seq(
