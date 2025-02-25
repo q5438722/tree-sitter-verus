@@ -1,11 +1,11 @@
-# tree-sitter-rust
+# tree-sitter-verus
 
 ## New Features for Verus
 - Support function specifications & more modifiers ("spec", "proof")
 - Support annotations for return values in function signatures
+- Support loop invariants and Verus-style assert/proof blocks, e.g., "proof {statements}"
 - Support extended condition expressions, e.g., "forall", "exists", "==>", etc.
 - Support Verus-style recursive proof functions
-- Support Verus-style assert/proof blocks, e.g., "proof {statements}"
 - Support Verus-style attribute items, e.g., "#[trigger]" (can be improved)
 - Support other Verus keywords, e.g., "ghost"
 
