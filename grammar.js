@@ -1301,17 +1301,20 @@ module.exports = grammar({
       optional(seq('if', field('condition', $._condition))),
     ),
 
+    loop_specification: $ => prec.left(seq(
+      choice(
+        seq('invariant', sepBy1(',', $._expression), optional(',')),
+        seq('decreases', sepBy1(',', $._expression), optional(',')),
+      )
+    )),
+
     while_expression: $ => seq(
       optional(seq($.label, ':')),
       'while',
       field('condition', $._condition),
-      optional(field('invariant', seq(
-          'invariant',
-          sepBy1(',', $._expression),
-          optional(','),  
-          )      
-        )
-      ),
+      optional(field('loop_specification', repeat(
+            $.loop_specification
+          ))),
     field('body', $.block),
     ),
 

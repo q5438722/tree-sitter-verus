@@ -3061,11 +3061,6 @@
     }
   },
   {
-    "type": "inner_doc_comment_marker",
-    "named": true,
-    "fields": {}
-  },
-  {
     "type": "label",
     "named": true,
     "fields": {},
@@ -3359,6 +3354,21 @@
       "types": [
         {
           "type": "label",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "loop_specification",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "_expression",
           "named": true
         }
       ]
@@ -3714,11 +3724,6 @@
         }
       ]
     }
-  },
-  {
-    "type": "outer_doc_comment_marker",
-    "named": true,
-    "fields": {}
   },
   {
     "type": "parameter",
@@ -4285,7 +4290,6 @@
   {
     "type": "source_file",
     "named": true,
-    "root": true,
     "fields": {},
     "children": {
       "multiple": true,
@@ -5590,21 +5594,13 @@
           }
         ]
       },
-      "invariant": {
+      "loop_specification": {
         "multiple": true,
         "required": false,
         "types": [
           {
-            "type": ",",
-            "named": false
-          },
-          {
-            "type": "_expression",
+            "type": "loop_specification",
             "named": true
-          },
-          {
-            "type": "invariant",
-            "named": false
           }
         ]
       }
@@ -6012,6 +6008,10 @@
     "named": false
   },
   {
+    "type": "inner_doc_comment_marker",
+    "named": true
+  },
+  {
     "type": "integer_literal",
     "named": true
   },
@@ -6074,6 +6074,10 @@
   {
     "type": "open",
     "named": false
+  },
+  {
+    "type": "outer_doc_comment_marker",
+    "named": true
   },
   {
     "type": "pat",
