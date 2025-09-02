@@ -484,15 +484,12 @@ module.exports = grammar({
     function_specifications: $ => repeat1($._specification),
 
     _specification: $ => prec.left(seq(
-      field('spec_type', choice(
-        'requires',
-        'ensures',
-        'increases',
-        'decreases',
-        'recommends',
-      )),
-      sepBy1(',', $._expression_except_range),
-      optional(','),  
+      choice(
+        field('requires', seq(field('spec_type', 'requires'), sepBy1(',', $._expression_except_range), optional(','))),
+        field('ensures', seq(field('spec_type', 'ensures'), sepBy1(',', $._expression_except_range), optional(','))),
+        field('decreases', seq(field('spec_type', 'decreases'), sepBy1(',', $._expression_except_range), optional(','))),
+        field('recommends', seq(field('spec_type', 'recommends'), sepBy1(',', $._expression_except_range), optional(','))),
+      )
     )),
 
     where_clause: $ => prec.right(seq(
@@ -1301,10 +1298,12 @@ module.exports = grammar({
       optional(seq('if', field('condition', $._condition))),
     ),
 
+    loop_specifications: $ => repeat1($.loop_specification),
+
     loop_specification: $ => prec.left(seq(
       choice(
-        seq('invariant', sepBy1(',', $._expression), optional(',')),
-        seq('decreases', sepBy1(',', $._expression), optional(',')),
+        field('invariant', seq('invariant', sepBy1(',', $._expression), optional(','))),
+        field('decreases', seq('decreases', sepBy1(',', $._expression), optional(','))),
       )
     )),
 
@@ -1312,9 +1311,7 @@ module.exports = grammar({
       optional(seq($.label, ':')),
       'while',
       field('condition', $._condition),
-      optional(field('loop_specification', repeat(
-            $.loop_specification
-          ))),
+      optional(field('loop_specification', $.loop_specifications)),
     field('body', $.block),
     ),
 
@@ -1330,13 +1327,7 @@ module.exports = grammar({
       field('pattern', $._pattern),
       'in',
       field('value', $._expression),
-      optional(field('invariant', seq(
-          'invariant',
-          sepBy1(',', $._expression),
-          optional(','),  
-          )      
-        )
-      ),
+      optional(field('loop_specifications', $.loop_specifications)),
       field('body', $.block),
     ),
 
