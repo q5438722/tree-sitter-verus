@@ -91,4 +91,9 @@ clean:
 test:
 	$(TS) test
 
+build_verus_so:
+	$(RM) verus.so
+	tree-sitter generate
+	python build_test.py
+
 .PHONY: all install uninstall clean test
