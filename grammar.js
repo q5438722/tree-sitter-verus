@@ -1336,15 +1336,21 @@ module.exports = grammar({
       'by',
       choice(
         seq(
-          '(',
-          $.identifier,
-          ')',
-          // optional(field('specification', seq($._specification, ';'))),
-          optional(field('specification', $._specification)),
-          ';',
+          '(', $.identifier, ')', ';'
         ),
-        field('body', $.block),
-      ),
+        seq(
+          prec(2, 
+            seq(
+              optional(seq(
+                '(', $.identifier, ')'
+                )),
+          // optional(field('specification', seq($._specification, ';'))),
+              optional(field('specification', $.function_specifications)),
+              field('body', $.block),
+              )
+          )
+        ),
+      )
     ),
 
     const_block: $ => seq(

@@ -1,5 +1,8 @@
 # tree-sitter-verus
 
+if installed by npm, exec:
+`alias tree-sitter="/home/chentianyu/tree-sitter-verus/node_modules/tree-sitter-cli/tree-sitter"`
+
 ## New Features for Verus
 - Support function specifications & more modifiers ("spec", "proof")
 - Support annotations for return values in function signatures

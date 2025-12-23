@@ -38,13 +38,13 @@
   ],
   "dependencies": {
     "node-addon-api": "^8.2.2",
-    "node-gyp-build": "^4.8.4"
+    "node-gyp-build": "^4.8.4",
+    "tree-sitter-cli": "^0.26.3"
   },
   "devDependencies": {
     "eslint": "^9.15.0",
     "eslint-config-treesitter": "^1.0.2",
-    "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "^0.24.4"
+    "prebuildify": "^6.0.1"
   },
   "peerDependencies": {
     "tree-sitter": "^0.22.1"
