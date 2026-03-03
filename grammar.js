@@ -27,7 +27,8 @@ const PREC = {
   or: 2,
   range: 1,
   assign: 0,
-  closure: -1,
+  entail: -1,
+  closure: -2,
 };
 
 const numericTypes = [
@@ -941,6 +942,7 @@ module.exports = grammar({
       $.generic_function,
       $.await_expression,
       $.field_expression,
+      $.view_expression,
       $.array_expression,
       $.tuple_expression,
       prec(1, $.macro_invocation),
@@ -1093,7 +1095,7 @@ module.exports = grammar({
       field('right', $._expression),
     )),
 
-    logic_entail_expression: $ => prec.left(PREC.assign, seq(
+    logic_entail_expression: $ => prec.left(PREC.entail, seq(
       field('left', $._expression),
       field('operator', choice('==>', '<==', '<==>')),
       field('right', $._expression),
@@ -1302,6 +1304,7 @@ module.exports = grammar({
 
     loop_specification: $ => prec.left(seq(
       choice(
+        field('invariant_except_break', seq('invariant_except_break', sepBy1(',', $._expression), optional(','))),
         field('invariant', seq('invariant', sepBy1(',', $._expression), optional(','))),
         field('decreases', seq('decreases', sepBy1(',', $._expression), optional(','))),
       )
@@ -1339,7 +1342,7 @@ module.exports = grammar({
           '(', $.identifier, ')', ';'
         ),
         seq(
-          prec(2, 
+          prec(0, 
             seq(
               optional(seq(
                 '(', $.identifier, ')'
@@ -1401,6 +1404,12 @@ module.exports = grammar({
         $._field_identifier,
         $.integer_literal,
       )),
+    )),
+
+    // similar with field expression
+    view_expression: $ => prec.right(PREC.field, seq(
+      field('value', $._expression),
+      '@',
     )),
 
     unsafe_block: $ => seq(
@@ -1702,7 +1711,7 @@ module.exports = grammar({
       $._reserved_identifier,
     ),
 
-    identifier: _ => /(r#)?[_\p{XID_Start}][_\p{XID_Continue}]*@?/,
+    identifier: _ => /(r#)?[_\p{XID_Start}][_\p{XID_Continue}]*/,
 
     shebang: _ => /#![\s]*[^\[].+/,
 

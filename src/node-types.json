@@ -266,6 +266,10 @@
         "named": true
       },
       {
+        "type": "view_expression",
+        "named": true
+      },
+      {
         "type": "while_expression",
         "named": true
       },
@@ -1259,6 +1263,10 @@
           },
           {
             "type": "verus_block",
+            "named": true
+          },
+          {
+            "type": "view_expression",
             "named": true
           },
           {
@@ -2462,6 +2470,10 @@
             "named": true
           },
           {
+            "type": "view_expression",
+            "named": true
+          },
+          {
             "type": "while_expression",
             "named": true
           },
@@ -2645,6 +2657,10 @@
           },
           {
             "type": "verus_block",
+            "named": true
+          },
+          {
+            "type": "view_expression",
             "named": true
           },
           {
@@ -2834,6 +2850,10 @@
             "named": true
           },
           {
+            "type": "view_expression",
+            "named": true
+          },
+          {
             "type": "while_expression",
             "named": true
           },
@@ -3017,6 +3037,10 @@
           },
           {
             "type": "verus_block",
+            "named": true
+          },
+          {
+            "type": "view_expression",
             "named": true
           },
           {
@@ -3728,6 +3752,24 @@
           },
           {
             "type": "invariant",
+            "named": false
+          }
+        ]
+      },
+      "invariant_except_break": {
+        "multiple": true,
+        "required": false,
+        "types": [
+          {
+            "type": ",",
+            "named": false
+          },
+          {
+            "type": "_expression",
+            "named": true
+          },
+          {
+            "type": "invariant_except_break",
             "named": false
           }
         ]
@@ -5832,6 +5874,22 @@
     }
   },
   {
+    "type": "view_expression",
+    "named": true,
+    "fields": {
+      "value": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "_expression",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "visibility_modifier",
     "named": true,
     "fields": {},
@@ -6394,6 +6452,10 @@
   },
   {
     "type": "invariant",
+    "named": false
+  },
+  {
+    "type": "invariant_except_break",
     "named": false
   },
   {
