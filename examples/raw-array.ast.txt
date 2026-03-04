@@ -1,0 +1,2324 @@
+(source_file [0, 0] - [485, 0]
+  (line_comment [0, 0] - [0, 42])
+  (line_comment [1, 0] - [1, 34])
+  (declaration_with_attrs [3, 0] - [3, 42]
+    (inner_attribute_item [3, 0] - [3, 42]
+      (attribute [3, 3] - [3, 41]
+        (identifier [3, 3] - [3, 11])
+        arguments: (token_tree [3, 11] - [3, 41]
+          (identifier [3, 12] - [3, 15])
+          (token_tree [3, 15] - [3, 32]
+            (identifier [3, 16] - [3, 23])
+            (string_literal [3, 26] - [3, 31]
+              (string_content [3, 27] - [3, 30])))
+          (identifier [3, 34] - [3, 40])))))
+  (line_comment [5, 0] - [5, 100])
+  (line_comment [6, 0] - [6, 10])
+  (line_comment [7, 0] - [7, 100])
+  (declaration_with_attrs [9, 0] - [10, 9]
+    (attribute_item [9, 0] - [9, 34]
+      (attribute [9, 2] - [9, 33]
+        (identifier [9, 2] - [9, 5])
+        arguments: (token_tree [9, 5] - [9, 33]
+          (identifier [9, 6] - [9, 9])
+          (token_tree [9, 9] - [9, 32]
+            (identifier [9, 10] - [9, 14])
+            (identifier [9, 16] - [9, 23])
+            (string_literal [9, 26] - [9, 31]
+              (string_content [9, 27] - [9, 30]))))))
+    (mod_item [10, 0] - [10, 9]
+      name: (identifier [10, 4] - [10, 8])))
+  (line_comment [12, 0] - [12, 100])
+  (line_comment [13, 0] - [13, 10])
+  (line_comment [14, 0] - [14, 100])
+  (declaration_with_attrs [16, 0] - [30, 1]
+    (macro_invocation [16, 0] - [30, 1]
+      macro: (scoped_identifier [16, 0] - [16, 14]
+        path: (identifier [16, 0] - [16, 6])
+        name: (identifier [16, 8] - [16, 14]))
+      (token_tree [16, 16] - [30, 1]
+        (token_tree [17, 8] - [17, 30]
+          (identifier [17, 9] - [17, 12])
+          (token_tree [17, 12] - [17, 29]
+            (identifier [17, 13] - [17, 20])
+            (string_literal [17, 23] - [17, 28]
+              (string_content [17, 24] - [17, 27]))))
+        (token_tree [17, 31] - [23, 5]
+          (identifier [18, 12] - [18, 15])
+          (identifier [18, 17] - [18, 22])
+          (identifier [19, 12] - [19, 17])
+          (token_tree [19, 19] - [22, 9]
+            (identifier [20, 12] - [20, 17])
+            (identifier [21, 12] - [21, 19])))
+        (identifier [23, 6] - [23, 10])
+        (token_tree [23, 11] - [29, 5]
+          (identifier [24, 8] - [24, 14])
+          (crate [24, 15] - [24, 20])
+          (identifier [24, 21] - [24, 26])
+          (identifier [25, 12] - [25, 17])
+          (identifier [25, 19] - [25, 24])
+          (token_tree [25, 26] - [28, 9]
+            (identifier [26, 12] - [26, 17])
+            (identifier [27, 12] - [27, 19]))))))
+  (declaration_with_attrs [32, 0] - [40, 2]
+    (use_declaration [32, 0] - [40, 2]
+      argument: (scoped_use_list [32, 4] - [40, 1]
+        path: (scoped_identifier [32, 4] - [32, 10]
+          name: (identifier [32, 6] - [32, 10]))
+        list: (use_list [32, 12] - [40, 1]
+          (scoped_identifier [33, 4] - [33, 17]
+            path: (identifier [33, 4] - [33, 9])
+            name: (identifier [33, 11] - [33, 17]))
+          (scoped_use_list [34, 4] - [37, 5]
+            path: (identifier [34, 4] - [34, 7])
+            list: (use_list [34, 9] - [37, 5]
+              (identifier [35, 8] - [35, 13])
+              (identifier [36, 8] - [36, 16])))
+          (identifier [38, 4] - [38, 7])
+          (identifier [39, 4] - [39, 9])))))
+  (declaration_with_attrs [41, 0] - [44, 2]
+    (use_declaration [41, 0] - [44, 2]
+      argument: (scoped_use_list [41, 4] - [44, 1]
+        path: (scoped_identifier [41, 4] - [41, 16]
+          path: (scoped_identifier [41, 4] - [41, 9]
+            name: (identifier [41, 6] - [41, 9]))
+          name: (identifier [41, 11] - [41, 16]))
+        list: (use_list [41, 18] - [44, 1]
+          (identifier [42, 4] - [42, 9])
+          (identifier [43, 4] - [43, 13])))))
+  (declaration_with_attrs [45, 0] - [45, 23]
+    (use_declaration [45, 0] - [45, 23]
+      argument: (use_wildcard [45, 4] - [45, 22]
+        (scoped_identifier [45, 4] - [45, 19]
+          path: (scoped_identifier [45, 4] - [45, 10]
+            name: (identifier [45, 6] - [45, 10]))
+          name: (identifier [45, 12] - [45, 19])))))
+  (line_comment [47, 0] - [47, 26])
+  (expression_statement [48, 0] - [49, 24]
+    (attribute_expression [48, 0] - [49, 23]
+      (attribute_item [48, 0] - [48, 24]
+        (attribute [48, 2] - [48, 23]
+          (identifier [48, 2] - [48, 5])
+          arguments: (token_tree [48, 5] - [48, 23]
+            (identifier [48, 6] - [48, 22]))))
+      (macro_invocation [49, 0] - [49, 23]
+        macro: (identifier [49, 0] - [49, 7])
+        (token_tree [49, 8] - [49, 23]
+          (string_literal [49, 9] - [49, 22]
+            (string_content [49, 10] - [49, 21]))))))
+  (line_comment [51, 0] - [51, 18])
+  (expression_statement [52, 0] - [53, 25]
+    (attribute_expression [52, 0] - [53, 24]
+      (attribute_item [52, 0] - [52, 24]
+        (attribute [52, 2] - [52, 23]
+          (identifier [52, 2] - [52, 5])
+          arguments: (token_tree [52, 5] - [52, 23]
+            (identifier [52, 6] - [52, 22]))))
+      (macro_invocation [53, 0] - [53, 24]
+        macro: (identifier [53, 0] - [53, 7])
+        (token_tree [53, 8] - [53, 24]
+          (string_literal [53, 9] - [53, 23]
+            (string_content [53, 10] - [53, 22]))))))
+  (line_comment [55, 0] - [55, 100])
+  (line_comment [56, 0] - [56, 20])
+  (line_comment [57, 0] - [57, 100])
+  (line_comment [59, 0] - [60, 0]
+    outer: (outer_doc_comment_marker [59, 2] - [59, 3])
+    doc: (doc_comment [59, 3] - [60, 0]))
+  (line_comment [60, 0] - [61, 0]
+    outer: (outer_doc_comment_marker [60, 2] - [60, 3])
+    doc: (doc_comment [60, 3] - [61, 0]))
+  (line_comment [61, 0] - [62, 0]
+    outer: (outer_doc_comment_marker [61, 2] - [61, 3])
+    doc: (doc_comment [61, 3] - [62, 0]))
+  (line_comment [62, 0] - [63, 0]
+    outer: (outer_doc_comment_marker [62, 2] - [62, 3])
+    doc: (doc_comment [62, 3] - [63, 0]))
+  (line_comment [63, 0] - [64, 0]
+    outer: (outer_doc_comment_marker [63, 2] - [63, 3])
+    doc: (doc_comment [63, 3] - [64, 0]))
+  (declaration_with_attrs [64, 0] - [70, 1]
+    (attribute_item [64, 0] - [64, 16]
+      (attribute [64, 2] - [64, 15]
+        (identifier [64, 2] - [64, 8])
+        arguments: (token_tree [64, 8] - [64, 15]
+          (identifier [64, 9] - [64, 14]))))
+    (enum_item [65, 0] - [70, 1]
+      name: (type_identifier [65, 5] - [65, 20])
+      type_parameters: (type_parameters [65, 20] - [65, 23]
+        (type_parameter [65, 21] - [65, 22]
+          name: (type_identifier [65, 21] - [65, 22])))
+      body: (enum_variant_list [65, 24] - [70, 1]
+        (line_comment [66, 4] - [67, 0]
+          outer: (outer_doc_comment_marker [66, 6] - [66, 7])
+          doc: (doc_comment [66, 7] - [67, 0]))
+        (enum_variant [67, 4] - [67, 48]
+          name: (identifier [67, 4] - [67, 11])
+          body: (field_declaration_list [67, 12] - [67, 48]
+            (field_declaration [67, 14] - [67, 34]
+              name: (field_identifier [67, 14] - [67, 17])
+              type: (generic_type [67, 19] - [67, 34]
+                type: (scoped_type_identifier [67, 19] - [67, 31]
+                  path: (identifier [67, 19] - [67, 22])
+                  name: (type_identifier [67, 24] - [67, 31]))
+                type_arguments: (type_arguments [67, 31] - [67, 34]
+                  (type_identifier [67, 32] - [67, 33]))))
+            (field_declaration [67, 36] - [67, 46]
+              name: (field_identifier [67, 36] - [67, 39])
+              type: (primitive_type [67, 41] - [67, 46]))))
+        (line_comment [68, 4] - [69, 0]
+          outer: (outer_doc_comment_marker [68, 6] - [68, 7])
+          doc: (doc_comment [68, 7] - [69, 0]))
+        (enum_variant [69, 4] - [69, 50]
+          name: (identifier [69, 4] - [69, 13])
+          body: (field_declaration_list [69, 14] - [69, 50]
+            (field_declaration [69, 16] - [69, 36]
+              name: (field_identifier [69, 16] - [69, 19])
+              type: (generic_type [69, 21] - [69, 36]
+                type: (scoped_type_identifier [69, 21] - [69, 33]
+                  path: (identifier [69, 21] - [69, 24])
+                  name: (type_identifier [69, 26] - [69, 33]))
+                type_arguments: (type_arguments [69, 33] - [69, 36]
+                  (type_identifier [69, 34] - [69, 35]))))
+            (field_declaration [69, 38] - [69, 48]
+              name: (field_identifier [69, 38] - [69, 41])
+              type: (primitive_type [69, 43] - [69, 48])))))))
+  (line_comment [72, 0] - [72, 44])
+  (declaration_with_attrs [73, 0] - [93, 1]
+    (impl_item [73, 0] - [93, 1]
+      type_parameters: (type_parameters [73, 4] - [73, 7]
+        (type_parameter [73, 5] - [73, 6]
+          name: (type_identifier [73, 5] - [73, 6])))
+      type: (generic_type [73, 8] - [73, 26]
+        type: (type_identifier [73, 8] - [73, 23])
+        type_arguments: (type_arguments [73, 23] - [73, 26]
+          (type_identifier [73, 24] - [73, 25])))
+      body: (declaration_list [73, 27] - [93, 1]
+        (line_comment [74, 4] - [75, 0]
+          outer: (outer_doc_comment_marker [74, 6] - [74, 7])
+          doc: (doc_comment [74, 7] - [75, 0]))
+        (line_comment [75, 4] - [76, 0]
+          outer: (outer_doc_comment_marker [75, 6] - [75, 7])
+          doc: (doc_comment [75, 7] - [76, 0]))
+        (line_comment [76, 4] - [77, 0]
+          outer: (outer_doc_comment_marker [76, 6] - [76, 7])
+          doc: (doc_comment [76, 7] - [77, 0]))
+        (line_comment [77, 4] - [78, 0]
+          outer: (outer_doc_comment_marker [77, 6] - [77, 7])
+          doc: (doc_comment [77, 7] - [78, 0]))
+        (line_comment [78, 4] - [79, 0]
+          outer: (outer_doc_comment_marker [78, 6] - [78, 7])
+          doc: (doc_comment [78, 7] - [79, 0]))
+        (line_comment [79, 4] - [80, 0]
+          outer: (outer_doc_comment_marker [79, 6] - [79, 7])
+          doc: (doc_comment [79, 7] - [80, 0]))
+        (line_comment [80, 4] - [81, 0]
+          outer: (outer_doc_comment_marker [80, 6] - [80, 7])
+          doc: (doc_comment [80, 7] - [81, 0]))
+        (line_comment [81, 4] - [82, 0]
+          outer: (outer_doc_comment_marker [81, 6] - [81, 7])
+          doc: (doc_comment [81, 7] - [82, 0]))
+        (line_comment [82, 4] - [83, 0]
+          outer: (outer_doc_comment_marker [82, 6] - [82, 7])
+          doc: (doc_comment [82, 7] - [83, 0]))
+        (declaration_with_attrs [83, 4] - [92, 5]
+          (function_item [83, 4] - [92, 5]
+            name: (identifier [83, 7] - [83, 14])
+            parameters: (parameters [83, 14] - [83, 25]
+              (self_parameter [83, 15] - [83, 24]
+                (mutable_specifier [83, 16] - [83, 19])
+                (self [83, 20] - [83, 24])))
+            return_type: (named_return_type [83, 29] - [83, 37]
+              (reference_type [83, 29] - [83, 37]
+                (mutable_specifier [83, 30] - [83, 33])
+                type: (array_type [83, 34] - [83, 37]
+                  element: (type_identifier [83, 35] - [83, 36]))))
+            body: (block [83, 38] - [92, 5]
+              (expression_statement [84, 8] - [91, 9]
+                (match_expression [84, 8] - [91, 9]
+                  value: (self [84, 14] - [84, 18])
+                  body: (match_block [84, 19] - [91, 9]
+                    (match_arm [85, 12] - [87, 14]
+                      pattern: (match_pattern [85, 12] - [85, 49]
+                        (struct_pattern [85, 12] - [85, 49]
+                          type: (scoped_type_identifier [85, 12] - [85, 36]
+                            path: (identifier [85, 12] - [85, 27])
+                            name: (type_identifier [85, 29] - [85, 36]))
+                          (field_pattern [85, 39] - [85, 42]
+                            name: (shorthand_field_identifier [85, 39] - [85, 42]))
+                          (field_pattern [85, 44] - [85, 47]
+                            name: (shorthand_field_identifier [85, 44] - [85, 47]))))
+                      value: (unsafe_block [85, 53] - [87, 13]
+                        (block [85, 60] - [87, 13]
+                          (call_expression [86, 16] - [86, 61]
+                            function: (scoped_identifier [86, 16] - [86, 41]
+                              path: (identifier [86, 16] - [86, 21])
+                              name: (identifier [86, 23] - [86, 41]))
+                            arguments: (arguments [86, 41] - [86, 61]
+                              (call_expression [86, 42] - [86, 54]
+                                function: (field_expression [86, 42] - [86, 52]
+                                  value: (identifier [86, 42] - [86, 45])
+                                  field: (field_identifier [86, 46] - [86, 52]))
+                                arguments: (arguments [86, 52] - [86, 54]))
+                              (unary_expression [86, 56] - [86, 60]
+                                (identifier [86, 57] - [86, 60])))))))
+                    (match_arm [88, 12] - [90, 14]
+                      pattern: (match_pattern [88, 12] - [88, 51]
+                        (struct_pattern [88, 12] - [88, 51]
+                          type: (scoped_type_identifier [88, 12] - [88, 38]
+                            path: (identifier [88, 12] - [88, 27])
+                            name: (type_identifier [88, 29] - [88, 38]))
+                          (field_pattern [88, 41] - [88, 44]
+                            name: (shorthand_field_identifier [88, 41] - [88, 44]))
+                          (field_pattern [88, 46] - [88, 49]
+                            name: (shorthand_field_identifier [88, 46] - [88, 49]))))
+                      value: (unsafe_block [88, 55] - [90, 13]
+                        (block [88, 62] - [90, 13]
+                          (call_expression [89, 16] - [89, 61]
+                            function: (scoped_identifier [89, 16] - [89, 41]
+                              path: (identifier [89, 16] - [89, 21])
+                              name: (identifier [89, 23] - [89, 41]))
+                            arguments: (arguments [89, 41] - [89, 61]
+                              (call_expression [89, 42] - [89, 54]
+                                function: (field_expression [89, 42] - [89, 52]
+                                  value: (identifier [89, 42] - [89, 45])
+                                  field: (field_identifier [89, 46] - [89, 52]))
+                                arguments: (arguments [89, 52] - [89, 54]))
+                              (unary_expression [89, 56] - [89, 60]
+                                (identifier [89, 57] - [89, 60]))))))))))))))))
+  (line_comment [95, 0] - [95, 100])
+  (line_comment [96, 0] - [96, 12])
+  (line_comment [97, 0] - [97, 100])
+  (line_comment [99, 0] - [99, 55])
+  (declaration_with_attrs [100, 0] - [134, 1]
+    (attribute_item [100, 0] - [100, 24]
+      (attribute [100, 2] - [100, 23]
+        (identifier [100, 2] - [100, 5])
+        arguments: (token_tree [100, 5] - [100, 23]
+          (identifier [100, 6] - [100, 22]))))
+    (macro_invocation [101, 0] - [134, 1]
+      macro: (identifier [101, 0] - [101, 5])
+      (token_tree [101, 7] - [134, 1]
+        (line_comment [103, 0] - [103, 51])
+        (token_tree [104, 1] - [104, 38]
+          (identifier [104, 2] - [104, 10])
+          (identifier [104, 12] - [104, 34])
+          (token_tree [104, 34] - [104, 37]
+            (identifier [104, 35] - [104, 36])))
+        (token_tree [105, 1] - [105, 40]
+          (identifier [105, 2] - [105, 10])
+          (identifier [105, 12] - [105, 39]))
+        (token_tree [106, 1] - [106, 26]
+          (identifier [106, 2] - [106, 10])
+          (identifier [106, 12] - [106, 25]))
+        (identifier [107, 11] - [107, 28])
+        (identifier [107, 29] - [107, 30])
+        (token_tree [107, 31] - [107, 51]
+          (identifier [107, 32] - [107, 47])
+          (identifier [107, 48] - [107, 49]))
+        (line_comment [109, 0] - [109, 42])
+        (token_tree [110, 1] - [110, 40]
+          (identifier [110, 2] - [110, 10])
+          (identifier [110, 12] - [110, 39]))
+        (token_tree [111, 1] - [111, 26]
+          (identifier [111, 2] - [111, 10])
+          (identifier [111, 12] - [111, 25]))
+        (identifier [112, 11] - [112, 19])
+        (token_tree [112, 19] - [112, 27]
+          (identifier [112, 20] - [112, 26]))
+        (line_comment [114, 0] - [114, 47])
+        (token_tree [115, 1] - [115, 40]
+          (identifier [115, 2] - [115, 10])
+          (identifier [115, 12] - [115, 39]))
+        (token_tree [116, 1] - [116, 26]
+          (identifier [116, 2] - [116, 10])
+          (identifier [116, 12] - [116, 25]))
+        (identifier [117, 11] - [117, 24])
+        (token_tree [117, 24] - [117, 50]
+          (identifier [117, 25] - [117, 29])
+          (identifier [117, 31] - [117, 36])
+          (identifier [117, 38] - [117, 49]))
+        (line_comment [119, 0] - [120, 0]
+          outer: (outer_doc_comment_marker [119, 2] - [119, 3])
+          doc: (doc_comment [119, 3] - [120, 0]))
+        (line_comment [120, 0] - [121, 0]
+          outer: (outer_doc_comment_marker [120, 2] - [120, 3])
+          doc: (doc_comment [120, 3] - [121, 0]))
+        (identifier [121, 25] - [121, 26])
+        (token_tree [121, 27] - [121, 49]
+          (identifier [121, 29] - [121, 35])
+          (identifier [121, 37] - [121, 42])
+          (identifier [121, 45] - [121, 46]))
+        (token_tree [121, 49] - [121, 61]
+          (identifier [121, 50] - [121, 53])
+          (primitive_type [121, 55] - [121, 60]))
+        (token_tree [121, 65] - [121, 115]
+          (identifier [121, 66] - [121, 72])
+          (identifier [121, 74] - [121, 80])
+          (identifier [121, 81] - [121, 87])
+          (identifier [121, 89] - [121, 93])
+          (identifier [121, 95] - [121, 100])
+          (identifier [121, 102] - [121, 113]))
+        (identifier [123, 8] - [123, 11])
+        (identifier [123, 14] - [123, 18])
+        (identifier [123, 20] - [123, 26])
+        (identifier [123, 28] - [123, 35])
+        (identifier [123, 38] - [123, 39])
+        (token_tree [123, 40] - [123, 42])
+        (primitive_type [123, 46] - [123, 51])
+        (identifier [123, 53] - [123, 56])
+        (primitive_type [123, 60] - [123, 65])
+        (identifier [123, 70] - [123, 76])
+        (identifier [123, 77] - [123, 79])
+        (identifier [123, 80] - [123, 82])
+        (line_comment [128, 0] - [129, 0]
+          outer: (outer_doc_comment_marker [128, 2] - [128, 3])
+          doc: (doc_comment [128, 3] - [129, 0]))
+        (line_comment [129, 0] - [130, 0]
+          outer: (outer_doc_comment_marker [129, 2] - [129, 3])
+          doc: (doc_comment [129, 3] - [130, 0]))
+        (token_tree [130, 24] - [130, 33]
+          (identifier [130, 26] - [130, 31]))
+        (token_tree [130, 33] - [130, 49]
+          (identifier [130, 34] - [130, 40])
+          (identifier [130, 42] - [130, 48]))
+        (token_tree [130, 53] - [130, 70]
+          (identifier [130, 54] - [130, 60])
+          (mutable_specifier [130, 63] - [130, 66])
+          (primitive_type [130, 67] - [130, 69])))))
+  (verus_block [136, 0] - [460, 1]
+    (line_comment [138, 0] - [138, 100])
+    (line_comment [139, 0] - [139, 39])
+    (line_comment [140, 0] - [140, 100])
+    (line_comment [142, 0] - [143, 0]
+      outer: (outer_doc_comment_marker [142, 2] - [142, 3])
+      doc: (doc_comment [142, 3] - [143, 0]))
+    (line_comment [143, 0] - [144, 0]
+      outer: (outer_doc_comment_marker [143, 2] - [143, 3])
+      doc: (doc_comment [143, 3] - [144, 0]))
+    (declaration_with_attrs [144, 0] - [163, 1]
+      (attribute_item [144, 0] - [144, 26]
+        (attribute [144, 2] - [144, 25]
+          (scoped_identifier [144, 2] - [144, 25]
+            path: (identifier [144, 2] - [144, 10])
+            name: (identifier [144, 12] - [144, 25]))))
+      (function_item [145, 0] - [163, 1]
+        name: (identifier [145, 3] - [145, 29])
+        type_parameters: (type_parameters [145, 29] - [145, 32]
+          (type_parameter [145, 30] - [145, 31]
+            name: (type_identifier [145, 30] - [145, 31])))
+        parameters: (parameters [145, 32] - [145, 57]
+          (parameter [145, 33] - [145, 44]
+            pattern: (identifier [145, 33] - [145, 36])
+            type: (pointer_type [145, 38] - [145, 44]
+              (mutable_specifier [145, 39] - [145, 42])
+              type: (type_identifier [145, 43] - [145, 44])))
+          (parameter [145, 46] - [145, 56]
+            pattern: (identifier [145, 46] - [145, 49])
+            type: (primitive_type [145, 51] - [145, 56])))
+        return_type: (named_return_type [145, 61] - [145, 97]
+          (identifier [145, 62] - [145, 68])
+          (generic_type [145, 70] - [145, 96]
+            type: (type_identifier [145, 70] - [145, 76])
+            type_arguments: (type_arguments [145, 76] - [145, 96]
+              (generic_type [145, 77] - [145, 95]
+                type: (type_identifier [145, 77] - [145, 92])
+                type_arguments: (type_arguments [145, 92] - [145, 95]
+                  (type_identifier [145, 93] - [145, 94]))))))
+        (fn_qualifier [146, 4] - [154, 13]
+          (ensures_clause [146, 4] - [152, 10]
+            (binary_expression [147, 8] - [147, 42]
+              left: (binary_expression [147, 8] - [147, 23]
+                left: (call_expression [147, 8] - [147, 18]
+                  function: (field_expression [147, 8] - [147, 16]
+                    value: (identifier [147, 8] - [147, 11])
+                    field: (field_identifier [147, 12] - [147, 16]))
+                  arguments: (arguments [147, 16] - [147, 18]))
+                right: (integer_literal [147, 22] - [147, 23]))
+              right: (is_expression [147, 28] - [147, 42]
+                value: (identifier [147, 28] - [147, 34])
+                variant: (identifier [147, 38] - [147, 42])))
+            (binary_expression [148, 8] - [148, 42]
+              left: (binary_expression [148, 8] - [148, 23]
+                left: (call_expression [148, 8] - [148, 18]
+                  function: (field_expression [148, 8] - [148, 16]
+                    value: (identifier [148, 8] - [148, 11])
+                    field: (field_identifier [148, 12] - [148, 16]))
+                  arguments: (arguments [148, 16] - [148, 18]))
+                right: (integer_literal [148, 22] - [148, 23]))
+              right: (is_expression [148, 28] - [148, 42]
+                value: (identifier [148, 28] - [148, 34])
+                variant: (identifier [148, 38] - [148, 42])))
+            (binary_expression [149, 8] - [152, 9]
+              left: (is_expression [149, 8] - [149, 22]
+                value: (identifier [149, 8] - [149, 14])
+                variant: (identifier [149, 18] - [149, 22]))
+              right: (block [149, 27] - [152, 9]
+                (big_and_expression [150, 12] - [151, 97]
+                  (binary_expression [150, 16] - [150, 55]
+                    left: (call_expression [150, 16] - [150, 48]
+                      function: (field_expression [150, 16] - [150, 46]
+                        value: (call_expression [150, 16] - [150, 42]
+                          function: (field_expression [150, 16] - [150, 40]
+                            value: (arrow_expression [150, 16] - [150, 30]
+                              value: (identifier [150, 16] - [150, 22])
+                              field: (field_identifier [150, 24] - [150, 30]))
+                            field: (field_identifier [150, 31] - [150, 40]))
+                          arguments: (arguments [150, 40] - [150, 42]))
+                        field: (field_identifier [150, 43] - [150, 46]))
+                      arguments: (arguments [150, 46] - [150, 48]))
+                    right: (identifier [150, 52] - [150, 55]))
+                  (quantifier_expression [151, 16] - [151, 97]
+                    (closure_parameters [151, 22] - [151, 30]
+                      (parameter [151, 23] - [151, 29]
+                        pattern: (identifier [151, 23] - [151, 24])
+                        type: (primitive_type [151, 26] - [151, 29])))
+                    body: (binary_expression [151, 31] - [151, 97]
+                      left: (binary_expression [151, 31] - [151, 43]
+                        left: (binary_expression [151, 31] - [151, 37]
+                          left: (integer_literal [151, 31] - [151, 32])
+                          right: (identifier [151, 36] - [151, 37]))
+                        right: (identifier [151, 40] - [151, 43]))
+                      right: (call_expression [151, 48] - [151, 97]
+                        function: (identifier [151, 48] - [151, 55])
+                        arguments: (arguments [151, 55] - [151, 97]
+                          (attribute_expression [151, 56] - [151, 96]
+                            (attribute_item [151, 56] - [151, 66]
+                              (trigger_attribute [151, 56] - [151, 66]))
+                            (index_expression [151, 67] - [151, 96]
+                              (call_expression [151, 67] - [151, 93]
+                                function: (field_expression [151, 67] - [151, 91]
+                                  value: (arrow_expression [151, 67] - [151, 81]
+                                    value: (identifier [151, 67] - [151, 73])
+                                    field: (field_identifier [151, 75] - [151, 81]))
+                                  field: (field_identifier [151, 82] - [151, 91]))
+                                arguments: (arguments [151, 91] - [151, 93]))
+                              (identifier [151, 94] - [151, 95])))))))))))
+          (opens_invariants_clause [153, 4] - [153, 25])
+          (no_unwind_clause [154, 4] - [154, 13]))
+        body: (block [155, 0] - [163, 1]
+          (expression_statement [156, 4] - [162, 5]
+            (match_expression [156, 4] - [162, 5]
+              value: (call_expression [156, 10] - [156, 32]
+                function: (scoped_identifier [156, 10] - [156, 27]
+                  path: (scoped_identifier [156, 10] - [156, 22]
+                    path: (identifier [156, 10] - [156, 13])
+                    name: (identifier [156, 15] - [156, 22]))
+                  name: (identifier [156, 24] - [156, 27]))
+                arguments: (arguments [156, 27] - [156, 32]
+                  (identifier [156, 28] - [156, 31])))
+              body: (match_block [156, 33] - [162, 5]
+                (match_arm [157, 8] - [160, 10]
+                  pattern: (match_pattern [157, 8] - [157, 15]
+                    (tuple_struct_pattern [157, 8] - [157, 15]
+                      type: (identifier [157, 8] - [157, 12])
+                      (identifier [157, 13] - [157, 14])))
+                  value: (block [157, 19] - [160, 9]
+                    (expression_statement [158, 12] - [158, 59]
+                      (unsafe_block [158, 12] - [158, 59]
+                        (block [158, 19] - [158, 59]
+                          (call_expression [158, 21] - [158, 57]
+                            function: (scoped_identifier [158, 21] - [158, 37]
+                              path: (identifier [158, 21] - [158, 24])
+                              name: (identifier [158, 26] - [158, 37]))
+                            arguments: (arguments [158, 37] - [158, 57]
+                              (call_expression [158, 38] - [158, 48]
+                                function: (field_expression [158, 38] - [158, 46]
+                                  value: (identifier [158, 38] - [158, 39])
+                                  field: (field_identifier [158, 40] - [158, 46]))
+                                arguments: (arguments [158, 46] - [158, 48]))
+                              (integer_literal [158, 50] - [158, 51])
+                              (identifier [158, 53] - [158, 56]))))))
+                    (declaration_with_attrs [158, 59] - [158, 60]
+                      (empty_statement [158, 59] - [158, 60]))
+                    (call_expression [159, 12] - [159, 60]
+                      function: (identifier [159, 12] - [159, 16])
+                      arguments: (arguments [159, 16] - [159, 60]
+                        (struct_expression [159, 17] - [159, 59]
+                          name: (scoped_type_identifier [159, 17] - [159, 43]
+                            path: (identifier [159, 17] - [159, 32])
+                            name: (type_identifier [159, 34] - [159, 43]))
+                          body: (field_initializer_list [159, 44] - [159, 59]
+                            (field_initializer [159, 46] - [159, 52]
+                              field: (field_identifier [159, 46] - [159, 49])
+                              value: (identifier [159, 51] - [159, 52]))
+                            (shorthand_field_initializer [159, 54] - [159, 57]
+                              (identifier [159, 54] - [159, 57]))))))))
+                (match_arm [161, 8] - [161, 21]
+                  pattern: (match_pattern [161, 8] - [161, 12]
+                    (identifier [161, 8] - [161, 12]))
+                  value: (identifier [161, 16] - [161, 20]))))))))
+    (line_comment [165, 0] - [166, 0]
+      outer: (outer_doc_comment_marker [165, 2] - [165, 3])
+      doc: (doc_comment [165, 3] - [166, 0]))
+    (line_comment [166, 0] - [167, 0]
+      outer: (outer_doc_comment_marker [166, 2] - [166, 3])
+      doc: (doc_comment [166, 3] - [167, 0]))
+    (declaration_with_attrs [167, 0] - [175, 1]
+      (attribute_item [167, 0] - [167, 26]
+        (attribute [167, 2] - [167, 25]
+          (scoped_identifier [167, 2] - [167, 25]
+            path: (identifier [167, 2] - [167, 10])
+            name: (identifier [167, 12] - [167, 25]))))
+      (function_item [168, 0] - [175, 1]
+        name: (identifier [168, 3] - [168, 19])
+        type_parameters: (type_parameters [168, 19] - [168, 22]
+          (type_parameter [168, 20] - [168, 21]
+            name: (type_identifier [168, 20] - [168, 21])))
+        parameters: (parameters [168, 22] - [168, 47]
+          (parameter [168, 23] - [168, 34]
+            pattern: (identifier [168, 23] - [168, 26])
+            type: (pointer_type [168, 28] - [168, 34]
+              (mutable_specifier [168, 29] - [168, 32])
+              type: (type_identifier [168, 33] - [168, 34])))
+          (parameter [168, 36] - [168, 46]
+            pattern: (identifier [168, 36] - [168, 39])
+            type: (primitive_type [168, 41] - [168, 46])))
+        return_type: (named_return_type [168, 51] - [168, 65]
+          (identifier [168, 52] - [168, 58])
+          (primitive_type [168, 60] - [168, 64]))
+        (fn_qualifier [169, 4] - [172, 13]
+          (ensures_clause [169, 4] - [170, 88]
+            (binary_expression [170, 8] - [170, 87]
+              left: (identifier [170, 8] - [170, 14])
+              right: (parenthesized_expression [170, 18] - [170, 87]
+                (binary_expression [170, 19] - [170, 86]
+                  left: (binary_expression [170, 19] - [170, 66]
+                    left: (call_expression [170, 19] - [170, 29]
+                      function: (field_expression [170, 19] - [170, 27]
+                        value: (identifier [170, 19] - [170, 22])
+                        field: (field_identifier [170, 23] - [170, 27]))
+                      arguments: (arguments [170, 27] - [170, 29]))
+                    right: (binary_expression [170, 32] - [170, 66]
+                      left: (identifier [170, 32] - [170, 35])
+                      right: (call_expression [170, 38] - [170, 66]
+                        function: (generic_function [170, 38] - [170, 64]
+                          function: (scoped_identifier [170, 38] - [170, 59]
+                            path: (scoped_identifier [170, 38] - [170, 50]
+                              path: (identifier [170, 38] - [170, 42])
+                              name: (identifier [170, 44] - [170, 50]))
+                            name: (identifier [170, 52] - [170, 59]))
+                          type_arguments: (type_arguments [170, 61] - [170, 64]
+                            (type_identifier [170, 62] - [170, 63])))
+                        arguments: (arguments [170, 64] - [170, 66]))))
+                  right: (type_cast_expression [170, 69] - [170, 86]
+                    value: (scoped_identifier [170, 69] - [170, 79]
+                      path: (identifier [170, 69] - [170, 74])
+                      name: (identifier [170, 76] - [170, 79]))
+                    type: (primitive_type [170, 83] - [170, 86]))))))
+          (opens_invariants_clause [171, 4] - [171, 25])
+          (no_unwind_clause [172, 4] - [172, 13]))
+        body: (block [173, 0] - [175, 1]
+          (binary_expression [174, 4] - [174, 31]
+            left: (call_expression [174, 4] - [174, 25]
+              function: (field_expression [174, 4] - [174, 20]
+                value: (identifier [174, 4] - [174, 7])
+                field: (field_identifier [174, 8] - [174, 20]))
+              arguments: (arguments [174, 20] - [174, 25]
+                (identifier [174, 21] - [174, 24])))
+            right: (identifier [174, 28] - [174, 31])))))
+    (line_comment [177, 0] - [178, 0]
+      outer: (outer_doc_comment_marker [177, 2] - [177, 3])
+      doc: (doc_comment [177, 3] - [178, 0]))
+    (declaration_with_attrs [178, 0] - [198, 1]
+      (attribute_item [178, 0] - [178, 26]
+        (attribute [178, 2] - [178, 25]
+          (scoped_identifier [178, 2] - [178, 25]
+            path: (identifier [178, 2] - [178, 10])
+            name: (identifier [178, 12] - [178, 25]))))
+      (function_item [179, 0] - [198, 1]
+        name: (identifier [179, 3] - [179, 27])
+        type_parameters: (type_parameters [179, 27] - [179, 30]
+          (type_parameter [179, 28] - [179, 29]
+            name: (type_identifier [179, 28] - [179, 29])))
+        parameters: (parameters [179, 30] - [179, 56]
+          (parameter [179, 31] - [179, 43]
+            pattern: (identifier [179, 31] - [179, 34])
+            type: (pointer_type [179, 36] - [179, 43]
+              (mutable_specifier [179, 37] - [179, 40])
+              type: (primitive_type [179, 41] - [179, 43])))
+          (parameter [179, 45] - [179, 55]
+            pattern: (identifier [179, 45] - [179, 48])
+            type: (primitive_type [179, 50] - [179, 55])))
+        return_type: (named_return_type [179, 60] - [179, 96]
+          (identifier [179, 61] - [179, 67])
+          (generic_type [179, 69] - [179, 95]
+            type: (type_identifier [179, 69] - [179, 75])
+            type_arguments: (type_arguments [179, 75] - [179, 95]
+              (generic_type [179, 76] - [179, 94]
+                type: (type_identifier [179, 76] - [179, 91])
+                type_arguments: (type_arguments [179, 91] - [179, 94]
+                  (type_identifier [179, 92] - [179, 93]))))))
+        (fn_qualifier [180, 4] - [188, 13]
+          (ensures_clause [180, 4] - [186, 10]
+            (binary_expression [181, 8] - [181, 42]
+              left: (binary_expression [181, 8] - [181, 23]
+                left: (call_expression [181, 8] - [181, 18]
+                  function: (field_expression [181, 8] - [181, 16]
+                    value: (identifier [181, 8] - [181, 11])
+                    field: (field_identifier [181, 12] - [181, 16]))
+                  arguments: (arguments [181, 16] - [181, 18]))
+                right: (integer_literal [181, 22] - [181, 23]))
+              right: (is_expression [181, 28] - [181, 42]
+                value: (identifier [181, 28] - [181, 34])
+                variant: (identifier [181, 38] - [181, 42])))
+            (binary_expression [182, 8] - [182, 42]
+              left: (binary_expression [182, 8] - [182, 23]
+                left: (call_expression [182, 8] - [182, 18]
+                  function: (field_expression [182, 8] - [182, 16]
+                    value: (identifier [182, 8] - [182, 11])
+                    field: (field_identifier [182, 12] - [182, 16]))
+                  arguments: (arguments [182, 16] - [182, 18]))
+                right: (integer_literal [182, 22] - [182, 23]))
+              right: (is_expression [182, 28] - [182, 42]
+                value: (identifier [182, 28] - [182, 34])
+                variant: (identifier [182, 38] - [182, 42])))
+            (binary_expression [183, 8] - [186, 9]
+              left: (is_expression [183, 8] - [183, 22]
+                value: (identifier [183, 8] - [183, 14])
+                variant: (identifier [183, 18] - [183, 22]))
+              right: (block [183, 27] - [186, 9]
+                (big_and_expression [184, 12] - [185, 97]
+                  (binary_expression [184, 16] - [184, 55]
+                    left: (call_expression [184, 16] - [184, 48]
+                      function: (field_expression [184, 16] - [184, 46]
+                        value: (call_expression [184, 16] - [184, 42]
+                          function: (field_expression [184, 16] - [184, 40]
+                            value: (arrow_expression [184, 16] - [184, 30]
+                              value: (identifier [184, 16] - [184, 22])
+                              field: (field_identifier [184, 24] - [184, 30]))
+                            field: (field_identifier [184, 31] - [184, 40]))
+                          arguments: (arguments [184, 40] - [184, 42]))
+                        field: (field_identifier [184, 43] - [184, 46]))
+                      arguments: (arguments [184, 46] - [184, 48]))
+                    right: (identifier [184, 52] - [184, 55]))
+                  (quantifier_expression [185, 16] - [185, 97]
+                    (closure_parameters [185, 22] - [185, 30]
+                      (parameter [185, 23] - [185, 29]
+                        pattern: (identifier [185, 23] - [185, 24])
+                        type: (primitive_type [185, 26] - [185, 29])))
+                    body: (binary_expression [185, 31] - [185, 97]
+                      left: (binary_expression [185, 31] - [185, 43]
+                        left: (binary_expression [185, 31] - [185, 37]
+                          left: (integer_literal [185, 31] - [185, 32])
+                          right: (identifier [185, 36] - [185, 37]))
+                        right: (identifier [185, 40] - [185, 43]))
+                      right: (call_expression [185, 48] - [185, 97]
+                        function: (identifier [185, 48] - [185, 55])
+                        arguments: (arguments [185, 55] - [185, 97]
+                          (attribute_expression [185, 56] - [185, 96]
+                            (attribute_item [185, 56] - [185, 66]
+                              (trigger_attribute [185, 56] - [185, 66]))
+                            (index_expression [185, 67] - [185, 96]
+                              (call_expression [185, 67] - [185, 93]
+                                function: (field_expression [185, 67] - [185, 91]
+                                  value: (arrow_expression [185, 67] - [185, 81]
+                                    value: (identifier [185, 67] - [185, 73])
+                                    field: (field_identifier [185, 75] - [185, 81]))
+                                  field: (field_identifier [185, 82] - [185, 91]))
+                                arguments: (arguments [185, 91] - [185, 93]))
+                              (identifier [185, 94] - [185, 95])))))))))))
+          (opens_invariants_clause [187, 4] - [187, 25])
+          (no_unwind_clause [188, 4] - [188, 13]))
+        body: (block [189, 0] - [198, 1]
+          (expression_statement [190, 4] - [197, 5]
+            (match_expression [190, 4] - [197, 5]
+              value: (call_expression [190, 10] - [190, 42]
+                function: (scoped_identifier [190, 10] - [190, 27]
+                  path: (scoped_identifier [190, 10] - [190, 22]
+                    path: (identifier [190, 10] - [190, 13])
+                    name: (identifier [190, 15] - [190, 22]))
+                  name: (identifier [190, 24] - [190, 27]))
+                arguments: (arguments [190, 27] - [190, 42]
+                  (type_cast_expression [190, 28] - [190, 41]
+                    value: (identifier [190, 28] - [190, 31])
+                    type: (pointer_type [190, 35] - [190, 41]
+                      (mutable_specifier [190, 36] - [190, 39])
+                      type: (type_identifier [190, 40] - [190, 41])))))
+              body: (match_block [190, 43] - [197, 5]
+                (match_arm [191, 8] - [195, 10]
+                  pattern: (match_pattern [191, 8] - [191, 15]
+                    (tuple_struct_pattern [191, 8] - [191, 15]
+                      type: (identifier [191, 8] - [191, 12])
+                      (identifier [191, 13] - [191, 14])))
+                  value: (block [191, 19] - [195, 9]
+                    (line_comment [192, 12] - [192, 74])
+                    (expression_statement [193, 12] - [193, 59]
+                      (unsafe_block [193, 12] - [193, 59]
+                        (block [193, 19] - [193, 59]
+                          (call_expression [193, 21] - [193, 57]
+                            function: (scoped_identifier [193, 21] - [193, 37]
+                              path: (identifier [193, 21] - [193, 24])
+                              name: (identifier [193, 26] - [193, 37]))
+                            arguments: (arguments [193, 37] - [193, 57]
+                              (call_expression [193, 38] - [193, 48]
+                                function: (field_expression [193, 38] - [193, 46]
+                                  value: (identifier [193, 38] - [193, 39])
+                                  field: (field_identifier [193, 40] - [193, 46]))
+                                arguments: (arguments [193, 46] - [193, 48]))
+                              (integer_literal [193, 50] - [193, 51])
+                              (identifier [193, 53] - [193, 56]))))))
+                    (declaration_with_attrs [193, 59] - [193, 60]
+                      (empty_statement [193, 59] - [193, 60]))
+                    (call_expression [194, 12] - [194, 58]
+                      function: (identifier [194, 12] - [194, 16])
+                      arguments: (arguments [194, 16] - [194, 58]
+                        (struct_expression [194, 17] - [194, 57]
+                          name: (scoped_type_identifier [194, 17] - [194, 41]
+                            path: (identifier [194, 17] - [194, 32])
+                            name: (type_identifier [194, 34] - [194, 41]))
+                          body: (field_initializer_list [194, 42] - [194, 57]
+                            (field_initializer [194, 44] - [194, 50]
+                              field: (field_identifier [194, 44] - [194, 47])
+                              value: (identifier [194, 49] - [194, 50]))
+                            (shorthand_field_initializer [194, 52] - [194, 55]
+                              (identifier [194, 52] - [194, 55]))))))))
+                (match_arm [196, 8] - [196, 21]
+                  pattern: (match_pattern [196, 8] - [196, 12]
+                    (identifier [196, 8] - [196, 12]))
+                  value: (identifier [196, 16] - [196, 20]))))))))
+    (declaration_with_attrs [200, 0] - [326, 1]
+      (impl_item [200, 0] - [326, 1]
+        type_parameters: (type_parameters [200, 4] - [200, 7]
+          (type_parameter [200, 5] - [200, 6]
+            name: (type_identifier [200, 5] - [200, 6])))
+        type: (generic_type [200, 8] - [200, 26]
+          type: (type_identifier [200, 8] - [200, 23])
+          type_arguments: (type_arguments [200, 23] - [200, 26]
+            (type_identifier [200, 24] - [200, 25])))
+        body: (declaration_list [200, 27] - [326, 1]
+          (line_comment [201, 4] - [202, 0]
+            outer: (outer_doc_comment_marker [201, 6] - [201, 7])
+            doc: (doc_comment [201, 7] - [202, 0]))
+          (declaration_with_attrs [202, 4] - [205, 5]
+            (attribute_item [202, 4] - [202, 30]
+              (attribute [202, 6] - [202, 29]
+                (scoped_identifier [202, 6] - [202, 29]
+                  path: (identifier [202, 6] - [202, 14])
+                  name: (identifier [202, 16] - [202, 29]))))
+            (function_item [203, 4] - [205, 5]
+              (visibility_modifier [203, 4] - [203, 7])
+              (publish [203, 8] - [203, 12])
+              (function_mode [203, 13] - [203, 17])
+              name: (identifier [203, 21] - [203, 30])
+              parameters: (parameters [203, 30] - [203, 37]
+                (self_parameter [203, 31] - [203, 36]
+                  (self [203, 32] - [203, 36])))
+              return_type: (named_return_type [203, 41] - [203, 47]
+                (generic_type [203, 41] - [203, 47]
+                  type: (type_identifier [203, 41] - [203, 44])
+                  type_arguments: (type_arguments [203, 44] - [203, 47]
+                    (type_identifier [203, 45] - [203, 46]))))
+              body: (block [203, 48] - [205, 5]
+                (macro_invocation [204, 8] - [204, 24]
+                  macro: (identifier [204, 8] - [204, 21])
+                  (token_tree [204, 22] - [204, 24])))))
+          (line_comment [207, 4] - [208, 0]
+            outer: (outer_doc_comment_marker [207, 6] - [207, 7])
+            doc: (doc_comment [207, 7] - [208, 0]))
+          (line_comment [208, 4] - [209, 0]
+            outer: (outer_doc_comment_marker [208, 6] - [208, 7])
+            doc: (doc_comment [208, 7] - [209, 0]))
+          (line_comment [209, 4] - [210, 0]
+            outer: (outer_doc_comment_marker [209, 6] - [209, 7])
+            doc: (doc_comment [209, 7] - [210, 0]))
+          (line_comment [210, 4] - [211, 0]
+            outer: (outer_doc_comment_marker [210, 6] - [210, 7])
+            doc: (doc_comment [210, 7] - [211, 0]))
+          (line_comment [211, 4] - [212, 0]
+            outer: (outer_doc_comment_marker [211, 6] - [211, 7])
+            doc: (doc_comment [211, 7] - [212, 0]))
+          (line_comment [212, 4] - [213, 0]
+            outer: (outer_doc_comment_marker [212, 6] - [212, 7])
+            doc: (doc_comment [212, 7] - [213, 0]))
+          (line_comment [213, 4] - [214, 0]
+            outer: (outer_doc_comment_marker [213, 6] - [213, 7])
+            doc: (doc_comment [213, 7] - [214, 0]))
+          (line_comment [214, 4] - [215, 0]
+            outer: (outer_doc_comment_marker [214, 6] - [214, 7])
+            doc: (doc_comment [214, 7] - [215, 0]))
+          (line_comment [215, 4] - [216, 0]
+            outer: (outer_doc_comment_marker [215, 6] - [215, 7])
+            doc: (doc_comment [215, 7] - [216, 0]))
+          (line_comment [216, 4] - [217, 0]
+            outer: (outer_doc_comment_marker [216, 6] - [216, 7])
+            doc: (doc_comment [216, 7] - [217, 0]))
+          (line_comment [217, 4] - [218, 0]
+            outer: (outer_doc_comment_marker [217, 6] - [217, 7])
+            doc: (doc_comment [217, 7] - [218, 0]))
+          (line_comment [218, 4] - [219, 0]
+            outer: (outer_doc_comment_marker [218, 6] - [218, 7])
+            doc: (doc_comment [218, 7] - [219, 0]))
+          (line_comment [219, 4] - [220, 0]
+            outer: (outer_doc_comment_marker [219, 6] - [219, 7])
+            doc: (doc_comment [219, 7] - [220, 0]))
+          (line_comment [220, 4] - [221, 0]
+            outer: (outer_doc_comment_marker [220, 6] - [220, 7])
+            doc: (doc_comment [220, 7] - [221, 0]))
+          (declaration_with_attrs [221, 4] - [250, 5]
+            (function_item [221, 4] - [250, 5]
+              name: (identifier [221, 7] - [221, 18])
+              parameters: (parameters [221, 18] - [221, 30]
+                (parameter [221, 19] - [221, 29]
+                  pattern: (identifier [221, 19] - [221, 22])
+                  type: (primitive_type [221, 24] - [221, 29])))
+              return_type: (named_return_type [221, 34] - [221, 77]
+                (identifier [221, 35] - [221, 41])
+                (generic_type [221, 43] - [221, 76]
+                  type: (type_identifier [221, 43] - [221, 49])
+                  type_arguments: (type_arguments [221, 49] - [221, 76]
+                    (generic_type [221, 50] - [221, 68]
+                      type: (type_identifier [221, 50] - [221, 65])
+                      type_arguments: (type_arguments [221, 65] - [221, 68]
+                        (type_identifier [221, 66] - [221, 67])))
+                    (type_identifier [221, 70] - [221, 75]))))
+              (fn_qualifier [222, 8] - [231, 75]
+                (requires_clause [222, 8] - [225, 70]
+                  (binary_expression [223, 12] - [223, 19]
+                    left: (identifier [223, 12] - [223, 15])
+                    right: (integer_literal [223, 18] - [223, 19]))
+                  (binary_expression [224, 12] - [224, 35]
+                    left: (identifier [224, 12] - [224, 15])
+                    right: (type_cast_expression [224, 18] - [224, 35]
+                      value: (scoped_identifier [224, 18] - [224, 26]
+                        path: (identifier [224, 18] - [224, 21])
+                        name: (identifier [224, 23] - [224, 26]))
+                      type: (primitive_type [224, 30] - [224, 35])))
+                  (binary_expression [225, 12] - [225, 69]
+                    left: (binary_expression [225, 12] - [225, 46]
+                      left: (identifier [225, 12] - [225, 15])
+                      right: (call_expression [225, 18] - [225, 46]
+                        function: (generic_function [225, 18] - [225, 44]
+                          function: (scoped_identifier [225, 18] - [225, 39]
+                            path: (scoped_identifier [225, 18] - [225, 30]
+                              path: (identifier [225, 18] - [225, 22])
+                              name: (identifier [225, 24] - [225, 30]))
+                            name: (identifier [225, 32] - [225, 39]))
+                          type_arguments: (type_arguments [225, 41] - [225, 44]
+                            (type_identifier [225, 42] - [225, 43])))
+                        arguments: (arguments [225, 44] - [225, 46])))
+                    right: (type_cast_expression [225, 50] - [225, 69]
+                      value: (scoped_identifier [225, 50] - [225, 60]
+                        path: (identifier [225, 50] - [225, 55])
+                        name: (identifier [225, 57] - [225, 60]))
+                      type: (primitive_type [225, 64] - [225, 69]))))
+                (ensures_clause [226, 8] - [231, 75]
+                  (binary_expression [227, 12] - [230, 13]
+                    left: (is_expression [227, 12] - [227, 24]
+                      value: (identifier [227, 12] - [227, 18])
+                      variant: (identifier [227, 22] - [227, 24]))
+                    right: (block [227, 29] - [230, 13]
+                      (big_and_expression [228, 16] - [229, 99]
+                        (binary_expression [228, 20] - [228, 57]
+                          left: (call_expression [228, 20] - [228, 50]
+                            function: (field_expression [228, 20] - [228, 48]
+                              value: (call_expression [228, 20] - [228, 44]
+                                function: (field_expression [228, 20] - [228, 42]
+                                  value: (arrow_expression [228, 20] - [228, 32]
+                                    value: (identifier [228, 20] - [228, 26])
+                                    field: (field_identifier [228, 28] - [228, 32]))
+                                  field: (field_identifier [228, 33] - [228, 42]))
+                                arguments: (arguments [228, 42] - [228, 44]))
+                              field: (field_identifier [228, 45] - [228, 48]))
+                            arguments: (arguments [228, 48] - [228, 50]))
+                          right: (identifier [228, 54] - [228, 57]))
+                        (quantifier_expression [229, 20] - [229, 99]
+                          (closure_parameters [229, 26] - [229, 34]
+                            (parameter [229, 27] - [229, 33]
+                              pattern: (identifier [229, 27] - [229, 28])
+                              type: (primitive_type [229, 30] - [229, 33])))
+                          body: (binary_expression [229, 35] - [229, 99]
+                            left: (binary_expression [229, 35] - [229, 47]
+                              left: (binary_expression [229, 35] - [229, 41]
+                                left: (integer_literal [229, 35] - [229, 36])
+                                right: (identifier [229, 40] - [229, 41]))
+                              right: (identifier [229, 44] - [229, 47]))
+                            right: (call_expression [229, 52] - [229, 99]
+                              function: (identifier [229, 52] - [229, 59])
+                              arguments: (arguments [229, 59] - [229, 99]
+                                (attribute_expression [229, 60] - [229, 98]
+                                  (attribute_item [229, 60] - [229, 70]
+                                    (trigger_attribute [229, 60] - [229, 70]))
+                                  (index_expression [229, 71] - [229, 98]
+                                    (call_expression [229, 71] - [229, 95]
+                                      function: (field_expression [229, 71] - [229, 93]
+                                        value: (arrow_expression [229, 71] - [229, 83]
+                                          value: (identifier [229, 71] - [229, 77])
+                                          field: (field_identifier [229, 79] - [229, 83]))
+                                        field: (field_identifier [229, 84] - [229, 93]))
+                                      arguments: (arguments [229, 93] - [229, 95]))
+                                    (identifier [229, 96] - [229, 97]))))))))))
+                  (binary_expression [231, 12] - [231, 74]
+                    left: (is_expression [231, 12] - [231, 25]
+                      value: (identifier [231, 12] - [231, 18])
+                      variant: (identifier [231, 22] - [231, 25]))
+                    right: (binary_expression [231, 30] - [231, 74]
+                      left: (field_expression [231, 30] - [231, 48]
+                        value: (arrow_expression [231, 30] - [231, 43]
+                          value: (identifier [231, 30] - [231, 36])
+                          field: (field_identifier [231, 38] - [231, 43]))
+                        field: (field_identifier [231, 44] - [231, 48]))
+                      right: (scoped_identifier [231, 52] - [231, 74]
+                        path: (identifier [231, 52] - [231, 61])
+                        name: (identifier [231, 63] - [231, 74]))))))
+              body: (block [232, 4] - [250, 5]
+                (line_comment [233, 8] - [233, 42])
+                (expression_statement [234, 8] - [236, 9]
+                  (if_expression [234, 8] - [236, 9]
+                    condition: (binary_expression [234, 11] - [234, 47]
+                      left: (binary_expression [234, 11] - [234, 19]
+                        left: (identifier [234, 11] - [234, 14])
+                        right: (integer_literal [234, 18] - [234, 19]))
+                      right: (binary_expression [234, 23] - [234, 47]
+                        left: (identifier [234, 23] - [234, 26])
+                        right: (type_cast_expression [234, 30] - [234, 47]
+                          value: (scoped_identifier [234, 30] - [234, 38]
+                            path: (identifier [234, 30] - [234, 33])
+                            name: (identifier [234, 35] - [234, 38]))
+                          type: (primitive_type [234, 42] - [234, 47]))))
+                    consequence: (block [234, 48] - [236, 9]
+                      (expression_statement [235, 12] - [235, 81]
+                        (return_expression [235, 12] - [235, 80]
+                          (call_expression [235, 19] - [235, 80]
+                            function: (identifier [235, 19] - [235, 22])
+                            arguments: (arguments [235, 22] - [235, 80]
+                              (call_expression [235, 23] - [235, 79]
+                                function: (scoped_identifier [235, 23] - [235, 33]
+                                  path: (identifier [235, 23] - [235, 28])
+                                  name: (identifier [235, 30] - [235, 33]))
+                                arguments: (arguments [235, 33] - [235, 79]
+                                  (scoped_identifier [235, 34] - [235, 60]
+                                    path: (identifier [235, 34] - [235, 43])
+                                    name: (identifier [235, 45] - [235, 60]))
+                                  (string_literal [235, 62] - [235, 78]
+                                    (string_content [235, 63] - [235, 77])))))))))))
+                (line_comment [238, 8] - [238, 38])
+                (declaration_with_attrs [239, 8] - [242, 10]
+                  (let_declaration [239, 8] - [242, 10]
+                    pattern: (identifier [239, 12] - [239, 18])
+                    type: (type_identifier [239, 20] - [239, 26])
+                    value: (match_expression [239, 29] - [242, 9]
+                      value: (call_expression [239, 35] - [239, 58]
+                        function: (generic_function [239, 35] - [239, 53]
+                          function: (scoped_identifier [239, 35] - [239, 48]
+                            path: (identifier [239, 35] - [239, 41])
+                            name: (identifier [239, 43] - [239, 48]))
+                          type_arguments: (type_arguments [239, 50] - [239, 53]
+                            (type_identifier [239, 51] - [239, 52])))
+                        arguments: (arguments [239, 53] - [239, 58]
+                          (identifier [239, 54] - [239, 57])))
+                      body: (match_block [239, 59] - [242, 9]
+                        (match_arm [240, 12] - [240, 33]
+                          pattern: (match_pattern [240, 12] - [240, 22]
+                            (tuple_struct_pattern [240, 12] - [240, 22]
+                              type: (identifier [240, 12] - [240, 14])
+                              (identifier [240, 15] - [240, 21])))
+                          value: (identifier [240, 26] - [240, 32]))
+                        (match_arm [241, 12] - [241, 91]
+                          pattern: (match_pattern [241, 12] - [241, 18]
+                            (tuple_struct_pattern [241, 12] - [241, 18]
+                              type: (identifier [241, 12] - [241, 15])))
+                          value: (return_expression [241, 22] - [241, 90]
+                            (call_expression [241, 29] - [241, 90]
+                              function: (identifier [241, 29] - [241, 32])
+                              arguments: (arguments [241, 32] - [241, 90]
+                                (call_expression [241, 33] - [241, 89]
+                                  function: (scoped_identifier [241, 33] - [241, 43]
+                                    path: (identifier [241, 33] - [241, 38])
+                                    name: (identifier [241, 40] - [241, 43]))
+                                  arguments: (arguments [241, 43] - [241, 89]
+                                    (scoped_identifier [241, 44] - [241, 70]
+                                      path: (identifier [241, 44] - [241, 53])
+                                      name: (identifier [241, 55] - [241, 70]))
+                                    (string_literal [241, 72] - [241, 88]
+                                      (string_content [241, 73] - [241, 87]))))))))))))
+                (declaration_with_attrs [243, 8] - [243, 52]
+                  (let_declaration [243, 8] - [243, 52]
+                    pattern: (identifier [243, 12] - [243, 15])
+                    type: (pointer_type [243, 17] - [243, 24]
+                      (mutable_specifier [243, 18] - [243, 21])
+                      type: (primitive_type [243, 22] - [243, 24]))
+                    value: (unsafe_block [243, 27] - [243, 51]
+                      (block [243, 34] - [243, 51]
+                        (call_expression [243, 36] - [243, 49]
+                          function: (identifier [243, 36] - [243, 41])
+                          arguments: (arguments [243, 41] - [243, 49]
+                            (identifier [243, 42] - [243, 48])))))))
+                (line_comment [245, 8] - [245, 62])
+                (expression_statement [246, 8] - [249, 9]
+                  (match_expression [246, 8] - [249, 9]
+                    value: (call_expression [246, 14] - [246, 48]
+                      function: (identifier [246, 14] - [246, 38])
+                      arguments: (arguments [246, 38] - [246, 48]
+                        (identifier [246, 39] - [246, 42])
+                        (identifier [246, 44] - [246, 47])))
+                    body: (match_block [246, 49] - [249, 9]
+                      (match_arm [247, 12] - [247, 41]
+                        pattern: (match_pattern [247, 12] - [247, 25]
+                          (tuple_struct_pattern [247, 12] - [247, 25]
+                            type: (identifier [247, 12] - [247, 16])
+                            (identifier [247, 17] - [247, 24])))
+                        value: (call_expression [247, 29] - [247, 40]
+                          function: (identifier [247, 29] - [247, 31])
+                          arguments: (arguments [247, 31] - [247, 40]
+                            (identifier [247, 32] - [247, 39]))))
+                      (match_arm [248, 12] - [248, 77]
+                        pattern: (match_pattern [248, 12] - [248, 16]
+                          (identifier [248, 12] - [248, 16]))
+                        value: (call_expression [248, 20] - [248, 76]
+                          function: (identifier [248, 20] - [248, 23])
+                          arguments: (arguments [248, 23] - [248, 76]
+                            (call_expression [248, 24] - [248, 75]
+                              function: (scoped_identifier [248, 24] - [248, 34]
+                                path: (identifier [248, 24] - [248, 29])
+                                name: (identifier [248, 31] - [248, 34]))
+                              arguments: (arguments [248, 34] - [248, 75]
+                                (scoped_identifier [248, 35] - [248, 57]
+                                  path: (identifier [248, 35] - [248, 44])
+                                  name: (identifier [248, 46] - [248, 57]))
+                                (string_literal [248, 59] - [248, 74]
+                                  (string_content [248, 60] - [248, 73])))))))))))))
+          (line_comment [252, 4] - [253, 0]
+            outer: (outer_doc_comment_marker [252, 6] - [252, 7])
+            doc: (doc_comment [252, 7] - [253, 0]))
+          (line_comment [253, 4] - [254, 0]
+            outer: (outer_doc_comment_marker [253, 6] - [253, 7])
+            doc: (doc_comment [253, 7] - [254, 0]))
+          (line_comment [254, 4] - [255, 0]
+            outer: (outer_doc_comment_marker [254, 6] - [254, 7])
+            doc: (doc_comment [254, 7] - [255, 0]))
+          (line_comment [255, 4] - [256, 0]
+            outer: (outer_doc_comment_marker [255, 6] - [255, 7])
+            doc: (doc_comment [255, 7] - [256, 0]))
+          (line_comment [256, 4] - [257, 0]
+            outer: (outer_doc_comment_marker [256, 6] - [256, 7])
+            doc: (doc_comment [256, 7] - [257, 0]))
+          (line_comment [257, 4] - [258, 0]
+            outer: (outer_doc_comment_marker [257, 6] - [257, 7])
+            doc: (doc_comment [257, 7] - [258, 0]))
+          (line_comment [258, 4] - [259, 0]
+            outer: (outer_doc_comment_marker [258, 6] - [258, 7])
+            doc: (doc_comment [258, 7] - [259, 0]))
+          (line_comment [259, 4] - [260, 0]
+            outer: (outer_doc_comment_marker [259, 6] - [259, 7])
+            doc: (doc_comment [259, 7] - [260, 0]))
+          (line_comment [260, 4] - [261, 0]
+            outer: (outer_doc_comment_marker [260, 6] - [260, 7])
+            doc: (doc_comment [260, 7] - [261, 0]))
+          (line_comment [261, 4] - [262, 0]
+            outer: (outer_doc_comment_marker [261, 6] - [261, 7])
+            doc: (doc_comment [261, 7] - [262, 0]))
+          (line_comment [262, 4] - [263, 0]
+            outer: (outer_doc_comment_marker [262, 6] - [262, 7])
+            doc: (doc_comment [262, 7] - [263, 0]))
+          (line_comment [263, 4] - [264, 0]
+            outer: (outer_doc_comment_marker [263, 6] - [263, 7])
+            doc: (doc_comment [263, 7] - [264, 0]))
+          (line_comment [264, 4] - [265, 0]
+            outer: (outer_doc_comment_marker [264, 6] - [264, 7])
+            doc: (doc_comment [264, 7] - [265, 0]))
+          (line_comment [265, 4] - [266, 0]
+            outer: (outer_doc_comment_marker [265, 6] - [265, 7])
+            doc: (doc_comment [265, 7] - [266, 0]))
+          (line_comment [266, 4] - [267, 0]
+            outer: (outer_doc_comment_marker [266, 6] - [266, 7])
+            doc: (doc_comment [266, 7] - [267, 0]))
+          (line_comment [267, 4] - [268, 0]
+            outer: (outer_doc_comment_marker [267, 6] - [267, 7])
+            doc: (doc_comment [267, 7] - [268, 0]))
+          (line_comment [268, 4] - [269, 0]
+            outer: (outer_doc_comment_marker [268, 6] - [268, 7])
+            doc: (doc_comment [268, 7] - [269, 0]))
+          (line_comment [269, 4] - [270, 0]
+            outer: (outer_doc_comment_marker [269, 6] - [269, 7])
+            doc: (doc_comment [269, 7] - [270, 0]))
+          (line_comment [270, 4] - [271, 0]
+            outer: (outer_doc_comment_marker [270, 6] - [270, 7])
+            doc: (doc_comment [270, 7] - [271, 0]))
+          (line_comment [271, 4] - [272, 0]
+            outer: (outer_doc_comment_marker [271, 6] - [271, 7])
+            doc: (doc_comment [271, 7] - [272, 0]))
+          (line_comment [272, 4] - [273, 0]
+            outer: (outer_doc_comment_marker [272, 6] - [272, 7])
+            doc: (doc_comment [272, 7] - [273, 0]))
+          (line_comment [273, 4] - [274, 0]
+            outer: (outer_doc_comment_marker [273, 6] - [273, 7])
+            doc: (doc_comment [273, 7] - [274, 0]))
+          (line_comment [274, 4] - [275, 0]
+            outer: (outer_doc_comment_marker [274, 6] - [274, 7])
+            doc: (doc_comment [274, 7] - [275, 0]))
+          (declaration_with_attrs [275, 4] - [303, 5]
+            (function_item [275, 4] - [303, 5]
+              (function_modifiers [275, 4] - [275, 10])
+              name: (identifier [275, 14] - [275, 27])
+              parameters: (parameters [275, 27] - [275, 52]
+                (parameter [275, 28] - [275, 39]
+                  pattern: (identifier [275, 28] - [275, 31])
+                  type: (pointer_type [275, 33] - [275, 39]
+                    (mutable_specifier [275, 34] - [275, 37])
+                    type: (type_identifier [275, 38] - [275, 39])))
+                (parameter [275, 41] - [275, 51]
+                  pattern: (identifier [275, 41] - [275, 44])
+                  type: (primitive_type [275, 46] - [275, 51])))
+              return_type: (named_return_type [275, 56] - [275, 99]
+                (identifier [275, 57] - [275, 63])
+                (generic_type [275, 65] - [275, 98]
+                  type: (type_identifier [275, 65] - [275, 71])
+                  type_arguments: (type_arguments [275, 71] - [275, 98]
+                    (generic_type [275, 72] - [275, 90]
+                      type: (type_identifier [275, 72] - [275, 87])
+                      type_arguments: (type_arguments [275, 87] - [275, 90]
+                        (type_identifier [275, 88] - [275, 89])))
+                    (type_identifier [275, 92] - [275, 97]))))
+              (fn_qualifier [276, 8] - [286, 25]
+                (requires_clause [276, 8] - [280, 81]
+                  (binary_expression [277, 12] - [277, 19]
+                    left: (identifier [277, 12] - [277, 15])
+                    right: (integer_literal [277, 18] - [277, 19]))
+                  (binary_expression [278, 12] - [278, 35]
+                    left: (identifier [278, 12] - [278, 15])
+                    right: (type_cast_expression [278, 18] - [278, 35]
+                      value: (scoped_identifier [278, 18] - [278, 26]
+                        path: (identifier [278, 18] - [278, 21])
+                        name: (identifier [278, 23] - [278, 26]))
+                      type: (primitive_type [278, 30] - [278, 35])))
+                  (binary_expression [279, 12] - [279, 27]
+                    left: (call_expression [279, 12] - [279, 22]
+                      function: (field_expression [279, 12] - [279, 20]
+                        value: (identifier [279, 12] - [279, 15])
+                        field: (field_identifier [279, 16] - [279, 20]))
+                      arguments: (arguments [279, 20] - [279, 22]))
+                    right: (integer_literal [279, 26] - [279, 27]))
+                  (binary_expression [280, 12] - [280, 80]
+                    left: (binary_expression [280, 12] - [280, 59]
+                      left: (call_expression [280, 12] - [280, 22]
+                        function: (field_expression [280, 12] - [280, 20]
+                          value: (identifier [280, 12] - [280, 15])
+                          field: (field_identifier [280, 16] - [280, 20]))
+                        arguments: (arguments [280, 20] - [280, 22]))
+                      right: (binary_expression [280, 25] - [280, 59]
+                        left: (identifier [280, 25] - [280, 28])
+                        right: (call_expression [280, 31] - [280, 59]
+                          function: (generic_function [280, 31] - [280, 57]
+                            function: (scoped_identifier [280, 31] - [280, 52]
+                              path: (scoped_identifier [280, 31] - [280, 43]
+                                path: (identifier [280, 31] - [280, 35])
+                                name: (identifier [280, 37] - [280, 43]))
+                              name: (identifier [280, 45] - [280, 52]))
+                            type_arguments: (type_arguments [280, 54] - [280, 57]
+                              (type_identifier [280, 55] - [280, 56])))
+                          arguments: (arguments [280, 57] - [280, 59]))))
+                    right: (type_cast_expression [280, 63] - [280, 80]
+                      value: (scoped_identifier [280, 63] - [280, 73]
+                        path: (identifier [280, 63] - [280, 68])
+                        name: (identifier [280, 70] - [280, 73]))
+                      type: (primitive_type [280, 77] - [280, 80]))))
+                (ensures_clause [281, 8] - [286, 25]
+                  (binary_expression [282, 12] - [285, 13]
+                    left: (is_expression [282, 12] - [282, 24]
+                      value: (identifier [282, 12] - [282, 18])
+                      variant: (identifier [282, 22] - [282, 24]))
+                    right: (block [282, 29] - [285, 13]
+                      (big_and_expression [283, 16] - [284, 99]
+                        (binary_expression [283, 20] - [283, 57]
+                          left: (call_expression [283, 20] - [283, 50]
+                            function: (field_expression [283, 20] - [283, 48]
+                              value: (call_expression [283, 20] - [283, 44]
+                                function: (field_expression [283, 20] - [283, 42]
+                                  value: (arrow_expression [283, 20] - [283, 32]
+                                    value: (identifier [283, 20] - [283, 26])
+                                    field: (field_identifier [283, 28] - [283, 32]))
+                                  field: (field_identifier [283, 33] - [283, 42]))
+                                arguments: (arguments [283, 42] - [283, 44]))
+                              field: (field_identifier [283, 45] - [283, 48]))
+                            arguments: (arguments [283, 48] - [283, 50]))
+                          right: (identifier [283, 54] - [283, 57]))
+                        (quantifier_expression [284, 20] - [284, 99]
+                          (closure_parameters [284, 26] - [284, 34]
+                            (parameter [284, 27] - [284, 33]
+                              pattern: (identifier [284, 27] - [284, 28])
+                              type: (primitive_type [284, 30] - [284, 33])))
+                          body: (binary_expression [284, 35] - [284, 99]
+                            left: (binary_expression [284, 35] - [284, 47]
+                              left: (binary_expression [284, 35] - [284, 41]
+                                left: (integer_literal [284, 35] - [284, 36])
+                                right: (identifier [284, 40] - [284, 41]))
+                              right: (identifier [284, 44] - [284, 47]))
+                            right: (call_expression [284, 52] - [284, 99]
+                              function: (identifier [284, 52] - [284, 59])
+                              arguments: (arguments [284, 59] - [284, 99]
+                                (attribute_expression [284, 60] - [284, 98]
+                                  (attribute_item [284, 60] - [284, 70]
+                                    (trigger_attribute [284, 60] - [284, 70]))
+                                  (index_expression [284, 71] - [284, 98]
+                                    (call_expression [284, 71] - [284, 95]
+                                      function: (field_expression [284, 71] - [284, 93]
+                                        value: (arrow_expression [284, 71] - [284, 83]
+                                          value: (identifier [284, 71] - [284, 77])
+                                          field: (field_identifier [284, 79] - [284, 83]))
+                                        field: (field_identifier [284, 84] - [284, 93]))
+                                      arguments: (arguments [284, 93] - [284, 95]))
+                                    (identifier [284, 96] - [284, 97]))))))))))
+                  (is_expression [286, 12] - [286, 24]
+                    value: (identifier [286, 12] - [286, 18])
+                    variant: (identifier [286, 22] - [286, 24]))))
+              body: (block [287, 4] - [303, 5]
+                (line_comment [288, 8] - [288, 42])
+                (expression_statement [289, 8] - [291, 9]
+                  (if_expression [289, 8] - [291, 9]
+                    condition: (binary_expression [289, 11] - [289, 47]
+                      left: (binary_expression [289, 11] - [289, 19]
+                        left: (identifier [289, 11] - [289, 14])
+                        right: (integer_literal [289, 18] - [289, 19]))
+                      right: (binary_expression [289, 23] - [289, 47]
+                        left: (identifier [289, 23] - [289, 26])
+                        right: (type_cast_expression [289, 30] - [289, 47]
+                          value: (scoped_identifier [289, 30] - [289, 38]
+                            path: (identifier [289, 30] - [289, 33])
+                            name: (identifier [289, 35] - [289, 38]))
+                          type: (primitive_type [289, 42] - [289, 47]))))
+                    consequence: (block [289, 48] - [291, 9]
+                      (expression_statement [290, 12] - [290, 81]
+                        (return_expression [290, 12] - [290, 80]
+                          (call_expression [290, 19] - [290, 80]
+                            function: (identifier [290, 19] - [290, 22])
+                            arguments: (arguments [290, 22] - [290, 80]
+                              (call_expression [290, 23] - [290, 79]
+                                function: (scoped_identifier [290, 23] - [290, 33]
+                                  path: (identifier [290, 23] - [290, 28])
+                                  name: (identifier [290, 30] - [290, 33]))
+                                arguments: (arguments [290, 33] - [290, 79]
+                                  (scoped_identifier [290, 34] - [290, 60]
+                                    path: (identifier [290, 34] - [290, 43])
+                                    name: (identifier [290, 45] - [290, 60]))
+                                  (string_literal [290, 62] - [290, 78]
+                                    (string_content [290, 63] - [290, 77])))))))))))
+                (line_comment [293, 8] - [293, 47])
+                (expression_statement [294, 8] - [296, 9]
+                  (if_expression [294, 8] - [296, 9]
+                    condition: (call_expression [294, 11] - [294, 37]
+                      function: (identifier [294, 11] - [294, 27])
+                      arguments: (arguments [294, 27] - [294, 37]
+                        (identifier [294, 28] - [294, 31])
+                        (identifier [294, 33] - [294, 36])))
+                    consequence: (block [294, 38] - [296, 9]
+                      (expression_statement [295, 12] - [295, 89]
+                        (return_expression [295, 12] - [295, 88]
+                          (call_expression [295, 19] - [295, 88]
+                            function: (identifier [295, 19] - [295, 22])
+                            arguments: (arguments [295, 22] - [295, 88]
+                              (call_expression [295, 23] - [295, 87]
+                                function: (scoped_identifier [295, 23] - [295, 33]
+                                  path: (identifier [295, 23] - [295, 28])
+                                  name: (identifier [295, 30] - [295, 33]))
+                                arguments: (arguments [295, 33] - [295, 87]
+                                  (scoped_identifier [295, 34] - [295, 60]
+                                    path: (identifier [295, 34] - [295, 43])
+                                    name: (identifier [295, 45] - [295, 60]))
+                                  (string_literal [295, 62] - [295, 86]
+                                    (string_content [295, 63] - [295, 85])))))))))))
+                (line_comment [298, 8] - [298, 62])
+                (expression_statement [299, 8] - [302, 9]
+                  (match_expression [299, 8] - [302, 9]
+                    value: (call_expression [299, 14] - [299, 50]
+                      function: (identifier [299, 14] - [299, 40])
+                      arguments: (arguments [299, 40] - [299, 50]
+                        (identifier [299, 41] - [299, 44])
+                        (identifier [299, 46] - [299, 49])))
+                    body: (match_block [299, 51] - [302, 9]
+                      (match_arm [300, 12] - [300, 41]
+                        pattern: (match_pattern [300, 12] - [300, 25]
+                          (tuple_struct_pattern [300, 12] - [300, 25]
+                            type: (identifier [300, 12] - [300, 16])
+                            (identifier [300, 17] - [300, 24])))
+                        value: (call_expression [300, 29] - [300, 40]
+                          function: (identifier [300, 29] - [300, 31])
+                          arguments: (arguments [300, 31] - [300, 40]
+                            (identifier [300, 32] - [300, 39]))))
+                      (match_arm [301, 12] - [301, 83]
+                        pattern: (match_pattern [301, 12] - [301, 16]
+                          (identifier [301, 12] - [301, 16]))
+                        value: (call_expression [301, 20] - [301, 82]
+                          function: (identifier [301, 20] - [301, 23])
+                          arguments: (arguments [301, 23] - [301, 82]
+                            (call_expression [301, 24] - [301, 81]
+                              function: (scoped_identifier [301, 24] - [301, 34]
+                                path: (identifier [301, 24] - [301, 29])
+                                name: (identifier [301, 31] - [301, 34]))
+                              arguments: (arguments [301, 34] - [301, 81]
+                                (scoped_identifier [301, 35] - [301, 61]
+                                  path: (identifier [301, 35] - [301, 44])
+                                  name: (identifier [301, 46] - [301, 61]))
+                                (string_literal [301, 63] - [301, 80]
+                                  (string_content [301, 64] - [301, 79])))))))))))))
+          (line_comment [305, 4] - [306, 0]
+            outer: (outer_doc_comment_marker [305, 6] - [305, 7])
+            doc: (doc_comment [305, 7] - [306, 0]))
+          (line_comment [306, 4] - [307, 0]
+            outer: (outer_doc_comment_marker [306, 6] - [306, 7])
+            doc: (doc_comment [306, 7] - [307, 0]))
+          (line_comment [307, 4] - [308, 0]
+            outer: (outer_doc_comment_marker [307, 6] - [307, 7])
+            doc: (doc_comment [307, 7] - [308, 0]))
+          (line_comment [308, 4] - [309, 0]
+            outer: (outer_doc_comment_marker [308, 6] - [308, 7])
+            doc: (doc_comment [308, 7] - [309, 0]))
+          (line_comment [309, 4] - [310, 0]
+            outer: (outer_doc_comment_marker [309, 6] - [309, 7])
+            doc: (doc_comment [309, 7] - [310, 0]))
+          (line_comment [310, 4] - [311, 0]
+            outer: (outer_doc_comment_marker [310, 6] - [310, 7])
+            doc: (doc_comment [310, 7] - [311, 0]))
+          (line_comment [311, 4] - [312, 0]
+            outer: (outer_doc_comment_marker [311, 6] - [311, 7])
+            doc: (doc_comment [311, 7] - [312, 0]))
+          (line_comment [312, 4] - [313, 0]
+            outer: (outer_doc_comment_marker [312, 6] - [312, 7])
+            doc: (doc_comment [312, 7] - [313, 0]))
+          (line_comment [313, 4] - [314, 0]
+            outer: (outer_doc_comment_marker [313, 6] - [313, 7])
+            doc: (doc_comment [313, 7] - [314, 0]))
+          (declaration_with_attrs [314, 4] - [325, 5]
+            (attribute_item [314, 4] - [314, 30]
+              (attribute [314, 6] - [314, 29]
+                (scoped_identifier [314, 6] - [314, 29]
+                  path: (identifier [314, 6] - [314, 14])
+                  name: (identifier [314, 16] - [314, 29]))))
+            (function_item [315, 4] - [325, 5]
+              name: (identifier [315, 7] - [315, 10])
+              parameters: (parameters [315, 10] - [315, 17]
+                (self_parameter [315, 11] - [315, 16]
+                  (self [315, 12] - [315, 16])))
+              return_type: (named_return_type [315, 21] - [315, 35]
+                (identifier [315, 22] - [315, 28])
+                (reference_type [315, 30] - [315, 34]
+                  type: (array_type [315, 31] - [315, 34]
+                    element: (type_identifier [315, 32] - [315, 33]))))
+              body: (block [316, 4] - [325, 5]
+                (expression_statement [317, 8] - [324, 9]
+                  (match_expression [317, 8] - [324, 9]
+                    value: (self [317, 14] - [317, 18])
+                    body: (match_block [317, 19] - [324, 9]
+                      (match_arm [318, 12] - [320, 14]
+                        pattern: (match_pattern [318, 12] - [318, 49]
+                          (struct_pattern [318, 12] - [318, 49]
+                            type: (scoped_type_identifier [318, 12] - [318, 36]
+                              path: (identifier [318, 12] - [318, 27])
+                              name: (type_identifier [318, 29] - [318, 36]))
+                            (field_pattern [318, 39] - [318, 42]
+                              name: (shorthand_field_identifier [318, 39] - [318, 42]))
+                            (field_pattern [318, 44] - [318, 47]
+                              name: (shorthand_field_identifier [318, 44] - [318, 47]))))
+                        value: (unsafe_block [318, 53] - [320, 13]
+                          (block [318, 60] - [320, 13]
+                            (call_expression [319, 16] - [319, 57]
+                              function: (scoped_identifier [319, 16] - [319, 37]
+                                path: (identifier [319, 16] - [319, 21])
+                                name: (identifier [319, 23] - [319, 37]))
+                              arguments: (arguments [319, 37] - [319, 57]
+                                (call_expression [319, 38] - [319, 50]
+                                  function: (field_expression [319, 38] - [319, 48]
+                                    value: (identifier [319, 38] - [319, 41])
+                                    field: (field_identifier [319, 42] - [319, 48]))
+                                  arguments: (arguments [319, 48] - [319, 50]))
+                                (unary_expression [319, 52] - [319, 56]
+                                  (identifier [319, 53] - [319, 56])))))))
+                      (match_arm [321, 12] - [323, 14]
+                        pattern: (match_pattern [321, 12] - [321, 51]
+                          (struct_pattern [321, 12] - [321, 51]
+                            type: (scoped_type_identifier [321, 12] - [321, 38]
+                              path: (identifier [321, 12] - [321, 27])
+                              name: (type_identifier [321, 29] - [321, 38]))
+                            (field_pattern [321, 41] - [321, 44]
+                              name: (shorthand_field_identifier [321, 41] - [321, 44]))
+                            (field_pattern [321, 46] - [321, 49]
+                              name: (shorthand_field_identifier [321, 46] - [321, 49]))))
+                        value: (unsafe_block [321, 55] - [323, 13]
+                          (block [321, 62] - [323, 13]
+                            (call_expression [322, 16] - [322, 57]
+                              function: (scoped_identifier [322, 16] - [322, 37]
+                                path: (identifier [322, 16] - [322, 21])
+                                name: (identifier [322, 23] - [322, 37]))
+                              arguments: (arguments [322, 37] - [322, 57]
+                                (call_expression [322, 38] - [322, 50]
+                                  function: (field_expression [322, 38] - [322, 48]
+                                    value: (identifier [322, 38] - [322, 41])
+                                    field: (field_identifier [322, 42] - [322, 48]))
+                                  arguments: (arguments [322, 48] - [322, 50]))
+                                (unary_expression [322, 52] - [322, 56]
+                                  (identifier [322, 53] - [322, 56]))))))))))))))))
+    (line_comment [328, 0] - [328, 100])
+    (line_comment [329, 0] - [329, 22])
+    (line_comment [330, 0] - [330, 100])
+    (line_comment [332, 0] - [333, 0]
+      outer: (outer_doc_comment_marker [332, 2] - [332, 3])
+      doc: (doc_comment [332, 3] - [333, 0]))
+    (line_comment [333, 0] - [334, 0]
+      outer: (outer_doc_comment_marker [333, 2] - [333, 3])
+      doc: (doc_comment [333, 3] - [334, 0]))
+    (line_comment [334, 0] - [335, 0]
+      outer: (outer_doc_comment_marker [334, 2] - [334, 3])
+      doc: (doc_comment [334, 3] - [335, 0]))
+    (line_comment [335, 0] - [336, 0]
+      outer: (outer_doc_comment_marker [335, 2] - [335, 3])
+      doc: (doc_comment [335, 3] - [336, 0]))
+    (line_comment [336, 0] - [337, 0]
+      outer: (outer_doc_comment_marker [336, 2] - [336, 3])
+      doc: (doc_comment [336, 3] - [337, 0]))
+    (declaration_with_attrs [337, 0] - [342, 1]
+      (attribute_item [337, 0] - [337, 49]
+        (attribute [337, 2] - [337, 48]
+          (identifier [337, 2] - [337, 10])
+          arguments: (token_tree [337, 10] - [337, 48]
+            (identifier [337, 11] - [337, 14])
+            (token_tree [337, 14] - [337, 32]
+              (identifier [337, 15] - [337, 31]))
+            (identifier [337, 34] - [337, 40])
+            (token_tree [337, 40] - [337, 47]
+              (identifier [337, 41] - [337, 46])))))
+      (attribute_item [338, 0] - [338, 38]
+        (attribute [338, 2] - [338, 37]
+          (scoped_identifier [338, 2] - [338, 34]
+            path: (identifier [338, 2] - [338, 10])
+            name: (identifier [338, 12] - [338, 34]))
+          arguments: (token_tree [338, 34] - [338, 37]
+            (identifier [338, 35] - [338, 36]))))
+      (struct_item [339, 0] - [342, 1]
+        (visibility_modifier [339, 0] - [339, 3])
+        name: (type_identifier [339, 11] - [339, 19])
+        type_parameters: (type_parameters [339, 19] - [339, 22]
+          (type_parameter [339, 20] - [339, 21]
+            name: (type_identifier [339, 20] - [339, 21])))
+        body: (field_declaration_list [339, 23] - [342, 1]
+          (line_comment [340, 4] - [341, 0]
+            outer: (outer_doc_comment_marker [340, 6] - [340, 7])
+            doc: (doc_comment [340, 7] - [341, 0]))
+          (field_declaration [341, 4] - [341, 31]
+            name: (field_identifier [341, 4] - [341, 11])
+            type: (generic_type [341, 13] - [341, 31]
+              type: (type_identifier [341, 13] - [341, 28])
+              type_arguments: (type_arguments [341, 28] - [341, 31]
+                (type_identifier [341, 29] - [341, 30])))))))
+    (declaration_with_attrs [344, 0] - [428, 1]
+      (impl_item [344, 0] - [428, 1]
+        type_parameters: (type_parameters [344, 4] - [344, 7]
+          (type_parameter [344, 5] - [344, 6]
+            name: (type_identifier [344, 5] - [344, 6])))
+        type: (generic_type [344, 8] - [344, 19]
+          type: (type_identifier [344, 8] - [344, 16])
+          type_arguments: (type_arguments [344, 16] - [344, 19]
+            (type_identifier [344, 17] - [344, 18])))
+        body: (declaration_list [344, 20] - [428, 1]
+          (line_comment [345, 4] - [346, 0]
+            outer: (outer_doc_comment_marker [345, 6] - [345, 7])
+            doc: (doc_comment [345, 7] - [346, 0]))
+          (line_comment [346, 4] - [347, 0]
+            outer: (outer_doc_comment_marker [346, 6] - [346, 7])
+            doc: (doc_comment [346, 7] - [347, 0]))
+          (line_comment [347, 4] - [348, 0]
+            outer: (outer_doc_comment_marker [347, 6] - [347, 7])
+            doc: (doc_comment [347, 7] - [348, 0]))
+          (line_comment [348, 4] - [349, 0]
+            outer: (outer_doc_comment_marker [348, 6] - [348, 7])
+            doc: (doc_comment [348, 7] - [349, 0]))
+          (line_comment [349, 4] - [350, 0]
+            outer: (outer_doc_comment_marker [349, 6] - [349, 7])
+            doc: (doc_comment [349, 7] - [350, 0]))
+          (line_comment [350, 4] - [351, 0]
+            outer: (outer_doc_comment_marker [350, 6] - [350, 7])
+            doc: (doc_comment [350, 7] - [351, 0]))
+          (line_comment [351, 4] - [352, 0]
+            outer: (outer_doc_comment_marker [351, 6] - [351, 7])
+            doc: (doc_comment [351, 7] - [352, 0]))
+          (line_comment [352, 4] - [353, 0]
+            outer: (outer_doc_comment_marker [352, 6] - [352, 7])
+            doc: (doc_comment [352, 7] - [353, 0]))
+          (line_comment [353, 4] - [354, 0]
+            outer: (outer_doc_comment_marker [353, 6] - [353, 7])
+            doc: (doc_comment [353, 7] - [354, 0]))
+          (line_comment [354, 4] - [355, 0]
+            outer: (outer_doc_comment_marker [354, 6] - [354, 7])
+            doc: (doc_comment [354, 7] - [355, 0]))
+          (line_comment [355, 4] - [356, 0]
+            outer: (outer_doc_comment_marker [355, 6] - [355, 7])
+            doc: (doc_comment [355, 7] - [356, 0]))
+          (line_comment [356, 4] - [357, 0]
+            outer: (outer_doc_comment_marker [356, 6] - [356, 7])
+            doc: (doc_comment [356, 7] - [357, 0]))
+          (line_comment [357, 4] - [358, 0]
+            outer: (outer_doc_comment_marker [357, 6] - [357, 7])
+            doc: (doc_comment [357, 7] - [358, 0]))
+          (line_comment [358, 4] - [359, 0]
+            outer: (outer_doc_comment_marker [358, 6] - [358, 7])
+            doc: (doc_comment [358, 7] - [359, 0]))
+          (declaration_with_attrs [359, 4] - [380, 5]
+            (function_item [359, 4] - [380, 5]
+              (visibility_modifier [359, 4] - [359, 7])
+              name: (identifier [359, 11] - [359, 14])
+              parameters: (parameters [359, 14] - [359, 26]
+                (parameter [359, 15] - [359, 25]
+                  pattern: (identifier [359, 15] - [359, 18])
+                  type: (primitive_type [359, 20] - [359, 25])))
+              return_type: (named_return_type [359, 30] - [359, 66]
+                (identifier [359, 31] - [359, 37])
+                (generic_type [359, 39] - [359, 65]
+                  type: (type_identifier [359, 39] - [359, 45])
+                  type_arguments: (type_arguments [359, 45] - [359, 65]
+                    (generic_type [359, 46] - [359, 57]
+                      type: (type_identifier [359, 46] - [359, 54])
+                      type_arguments: (type_arguments [359, 54] - [359, 57]
+                        (type_identifier [359, 55] - [359, 56])))
+                    (type_identifier [359, 59] - [359, 64]))))
+              (fn_qualifier [360, 8] - [370, 75]
+                (requires_clause [360, 8] - [363, 70]
+                  (binary_expression [361, 12] - [361, 19]
+                    left: (identifier [361, 12] - [361, 15])
+                    right: (integer_literal [361, 18] - [361, 19]))
+                  (binary_expression [362, 12] - [362, 35]
+                    left: (identifier [362, 12] - [362, 15])
+                    right: (type_cast_expression [362, 18] - [362, 35]
+                      value: (scoped_identifier [362, 18] - [362, 26]
+                        path: (identifier [362, 18] - [362, 21])
+                        name: (identifier [362, 23] - [362, 26]))
+                      type: (primitive_type [362, 30] - [362, 35])))
+                  (binary_expression [363, 12] - [363, 69]
+                    left: (binary_expression [363, 12] - [363, 46]
+                      left: (identifier [363, 12] - [363, 15])
+                      right: (call_expression [363, 18] - [363, 46]
+                        function: (generic_function [363, 18] - [363, 44]
+                          function: (scoped_identifier [363, 18] - [363, 39]
+                            path: (scoped_identifier [363, 18] - [363, 30]
+                              path: (identifier [363, 18] - [363, 22])
+                              name: (identifier [363, 24] - [363, 30]))
+                            name: (identifier [363, 32] - [363, 39]))
+                          type_arguments: (type_arguments [363, 41] - [363, 44]
+                            (type_identifier [363, 42] - [363, 43])))
+                        arguments: (arguments [363, 44] - [363, 46])))
+                    right: (type_cast_expression [363, 50] - [363, 69]
+                      value: (scoped_identifier [363, 50] - [363, 60]
+                        path: (identifier [363, 50] - [363, 55])
+                        name: (identifier [363, 57] - [363, 60]))
+                      type: (primitive_type [363, 64] - [363, 69]))))
+                (ensures_clause [364, 8] - [370, 75]
+                  (binary_expression [365, 12] - [369, 13]
+                    left: (is_expression [365, 12] - [365, 24]
+                      value: (identifier [365, 12] - [365, 18])
+                      variant: (identifier [365, 22] - [365, 24]))
+                    right: (block [365, 29] - [369, 13]
+                      (big_and_expression [366, 16] - [368, 88]
+                        (call_expression [366, 20] - [366, 38]
+                          function: (field_expression [366, 20] - [366, 36]
+                            value: (arrow_expression [366, 20] - [366, 32]
+                              value: (identifier [366, 20] - [366, 26])
+                              field: (field_identifier [366, 28] - [366, 32]))
+                            field: (field_identifier [366, 33] - [366, 36]))
+                          arguments: (arguments [366, 36] - [366, 38]))
+                        (binary_expression [367, 20] - [367, 46]
+                          left: (call_expression [367, 20] - [367, 39]
+                            function: (field_expression [367, 20] - [367, 37]
+                              value: (view_expression [367, 20] - [367, 33]
+                                value: (arrow_expression [367, 20] - [367, 32]
+                                  value: (identifier [367, 20] - [367, 26])
+                                  field: (field_identifier [367, 28] - [367, 32])))
+                              field: (field_identifier [367, 34] - [367, 37]))
+                            arguments: (arguments [367, 37] - [367, 39]))
+                          right: (identifier [367, 43] - [367, 46]))
+                        (quantifier_expression [368, 20] - [368, 88]
+                          (closure_parameters [368, 26] - [368, 34]
+                            (parameter [368, 27] - [368, 33]
+                              pattern: (identifier [368, 27] - [368, 28])
+                              type: (primitive_type [368, 30] - [368, 33])))
+                          body: (binary_expression [368, 35] - [368, 88]
+                            left: (binary_expression [368, 35] - [368, 47]
+                              left: (binary_expression [368, 35] - [368, 41]
+                                left: (integer_literal [368, 35] - [368, 36])
+                                right: (identifier [368, 40] - [368, 41]))
+                              right: (identifier [368, 44] - [368, 47]))
+                            right: (call_expression [368, 52] - [368, 88]
+                              function: (identifier [368, 52] - [368, 59])
+                              arguments: (arguments [368, 59] - [368, 88]
+                                (index_expression [368, 60] - [368, 87]
+                                  (view_expression [368, 60] - [368, 84]
+                                    value: (attribute_expression [368, 60] - [368, 83]
+                                      (attribute_item [368, 60] - [368, 70]
+                                        (trigger_attribute [368, 60] - [368, 70]))
+                                      (arrow_expression [368, 71] - [368, 83]
+                                        value: (identifier [368, 71] - [368, 77])
+                                        field: (field_identifier [368, 79] - [368, 83]))))
+                                  (identifier [368, 85] - [368, 86])))))))))
+                  (binary_expression [370, 12] - [370, 74]
+                    left: (is_expression [370, 12] - [370, 25]
+                      value: (identifier [370, 12] - [370, 18])
+                      variant: (identifier [370, 22] - [370, 25]))
+                    right: (binary_expression [370, 30] - [370, 74]
+                      left: (field_expression [370, 30] - [370, 48]
+                        value: (arrow_expression [370, 30] - [370, 43]
+                          value: (identifier [370, 30] - [370, 36])
+                          field: (field_identifier [370, 38] - [370, 43]))
+                        field: (field_identifier [370, 44] - [370, 48]))
+                      right: (scoped_identifier [370, 52] - [370, 74]
+                        path: (identifier [370, 52] - [370, 61])
+                        name: (identifier [370, 63] - [370, 74]))))))
+              body: (block [371, 4] - [380, 5]
+                (declaration_with_attrs [372, 8] - [372, 77]
+                  (let_declaration [372, 8] - [372, 77]
+                    pattern: (identifier [372, 12] - [372, 19])
+                    type: (generic_type [372, 21] - [372, 39]
+                      type: (type_identifier [372, 21] - [372, 36])
+                      type_arguments: (type_arguments [372, 36] - [372, 39]
+                        (type_identifier [372, 37] - [372, 38])))
+                    value: (try_expression [372, 42] - [372, 76]
+                      (call_expression [372, 42] - [372, 75]
+                        function: (scoped_identifier [372, 42] - [372, 70]
+                          path: (identifier [372, 42] - [372, 57])
+                          name: (identifier [372, 59] - [372, 70]))
+                        arguments: (arguments [372, 70] - [372, 75]
+                          (identifier [372, 71] - [372, 74]))))))
+                (declaration_with_attrs [373, 8] - [373, 52]
+                  (let_declaration [373, 8] - [373, 52]
+                    pattern: (identifier [373, 12] - [373, 15])
+                    type: (generic_type [373, 17] - [373, 28]
+                      type: (type_identifier [373, 17] - [373, 25])
+                      type_arguments: (type_arguments [373, 25] - [373, 28]
+                        (type_identifier [373, 26] - [373, 27])))
+                    value: (struct_expression [373, 31] - [373, 51]
+                      name: (type_identifier [373, 31] - [373, 39])
+                      body: (field_initializer_list [373, 40] - [373, 51]
+                        (shorthand_field_initializer [373, 42] - [373, 49]
+                          (identifier [373, 42] - [373, 49]))))))
+                (expression_statement [374, 8] - [378, 9]
+                  (proof_block [374, 8] - [378, 9]
+                    (block [374, 14] - [378, 9]
+                      (line_comment [375, 12] - [375, 65])
+                      (expression_statement [376, 12] - [376, 64]
+                        (assume_expression [376, 12] - [376, 63]
+                          (binary_expression [376, 19] - [376, 62]
+                            left: (call_expression [376, 19] - [376, 29]
+                              function: (field_expression [376, 19] - [376, 27]
+                                value: (view_expression [376, 19] - [376, 23]
+                                  value: (identifier [376, 19] - [376, 22]))
+                                field: (field_identifier [376, 24] - [376, 27]))
+                              arguments: (arguments [376, 27] - [376, 29]))
+                            right: (call_expression [376, 33] - [376, 62]
+                              function: (field_expression [376, 33] - [376, 60]
+                                value: (call_expression [376, 33] - [376, 56]
+                                  function: (field_expression [376, 33] - [376, 54]
+                                    value: (field_expression [376, 33] - [376, 44]
+                                      value: (identifier [376, 33] - [376, 36])
+                                      field: (field_identifier [376, 37] - [376, 44]))
+                                    field: (field_identifier [376, 45] - [376, 54]))
+                                  arguments: (arguments [376, 54] - [376, 56]))
+                                field: (field_identifier [376, 57] - [376, 60]))
+                              arguments: (arguments [376, 60] - [376, 62])))))
+                      (expression_statement [377, 12] - [377, 99]
+                        (assume_expression [377, 12] - [377, 98]
+                          (quantifier_expression [377, 19] - [377, 97]
+                            (closure_parameters [377, 25] - [377, 33]
+                              (parameter [377, 26] - [377, 32]
+                                pattern: (identifier [377, 26] - [377, 27])
+                                type: (primitive_type [377, 29] - [377, 32])))
+                            (inner_attribute_item [377, 34] - [377, 42]
+                              (attribute [377, 37] - [377, 41]
+                                (identifier [377, 37] - [377, 41])))
+                            body: (binary_expression [377, 43] - [377, 97]
+                              left: (binary_expression [377, 43] - [377, 55]
+                                left: (binary_expression [377, 43] - [377, 49]
+                                  left: (integer_literal [377, 43] - [377, 44])
+                                  right: (identifier [377, 48] - [377, 49]))
+                                right: (identifier [377, 52] - [377, 55]))
+                              right: (binary_expression [377, 60] - [377, 97]
+                                left: (index_expression [377, 60] - [377, 67]
+                                  (view_expression [377, 60] - [377, 64]
+                                    value: (identifier [377, 60] - [377, 63]))
+                                  (identifier [377, 65] - [377, 66]))
+                                right: (index_expression [377, 71] - [377, 97]
+                                  (call_expression [377, 71] - [377, 94]
+                                    function: (field_expression [377, 71] - [377, 92]
+                                      value: (field_expression [377, 71] - [377, 82]
+                                        value: (identifier [377, 71] - [377, 74])
+                                        field: (field_identifier [377, 75] - [377, 82]))
+                                      field: (field_identifier [377, 83] - [377, 92]))
+                                    arguments: (arguments [377, 92] - [377, 94]))
+                                  (identifier [377, 95] - [377, 96]))))))))))
+                (call_expression [379, 8] - [379, 15]
+                  function: (identifier [379, 8] - [379, 10])
+                  arguments: (arguments [379, 10] - [379, 15]
+                    (identifier [379, 11] - [379, 14]))))))
+          (line_comment [382, 4] - [383, 0]
+            outer: (outer_doc_comment_marker [382, 6] - [382, 7])
+            doc: (doc_comment [382, 7] - [383, 0]))
+          (line_comment [383, 4] - [384, 0]
+            outer: (outer_doc_comment_marker [383, 6] - [383, 7])
+            doc: (doc_comment [383, 7] - [384, 0]))
+          (line_comment [384, 4] - [385, 0]
+            outer: (outer_doc_comment_marker [384, 6] - [384, 7])
+            doc: (doc_comment [384, 7] - [385, 0]))
+          (line_comment [385, 4] - [386, 0]
+            outer: (outer_doc_comment_marker [385, 6] - [385, 7])
+            doc: (doc_comment [385, 7] - [386, 0]))
+          (line_comment [386, 4] - [387, 0]
+            outer: (outer_doc_comment_marker [386, 6] - [386, 7])
+            doc: (doc_comment [386, 7] - [387, 0]))
+          (line_comment [387, 4] - [388, 0]
+            outer: (outer_doc_comment_marker [387, 6] - [387, 7])
+            doc: (doc_comment [387, 7] - [388, 0]))
+          (line_comment [388, 4] - [389, 0]
+            outer: (outer_doc_comment_marker [388, 6] - [388, 7])
+            doc: (doc_comment [388, 7] - [389, 0]))
+          (line_comment [389, 4] - [390, 0]
+            outer: (outer_doc_comment_marker [389, 6] - [389, 7])
+            doc: (doc_comment [389, 7] - [390, 0]))
+          (line_comment [390, 4] - [391, 0]
+            outer: (outer_doc_comment_marker [390, 6] - [390, 7])
+            doc: (doc_comment [390, 7] - [391, 0]))
+          (line_comment [391, 4] - [392, 0]
+            outer: (outer_doc_comment_marker [391, 6] - [391, 7])
+            doc: (doc_comment [391, 7] - [392, 0]))
+          (line_comment [392, 4] - [393, 0]
+            outer: (outer_doc_comment_marker [392, 6] - [392, 7])
+            doc: (doc_comment [392, 7] - [393, 0]))
+          (line_comment [393, 4] - [394, 0]
+            outer: (outer_doc_comment_marker [393, 6] - [393, 7])
+            doc: (doc_comment [393, 7] - [394, 0]))
+          (line_comment [394, 4] - [395, 0]
+            outer: (outer_doc_comment_marker [394, 6] - [394, 7])
+            doc: (doc_comment [394, 7] - [395, 0]))
+          (line_comment [395, 4] - [396, 0]
+            outer: (outer_doc_comment_marker [395, 6] - [395, 7])
+            doc: (doc_comment [395, 7] - [396, 0]))
+          (line_comment [396, 4] - [397, 0]
+            outer: (outer_doc_comment_marker [396, 6] - [396, 7])
+            doc: (doc_comment [396, 7] - [397, 0]))
+          (line_comment [397, 4] - [398, 0]
+            outer: (outer_doc_comment_marker [397, 6] - [397, 7])
+            doc: (doc_comment [397, 7] - [398, 0]))
+          (line_comment [398, 4] - [399, 0]
+            outer: (outer_doc_comment_marker [398, 6] - [398, 7])
+            doc: (doc_comment [398, 7] - [399, 0]))
+          (line_comment [399, 4] - [400, 0]
+            outer: (outer_doc_comment_marker [399, 6] - [399, 7])
+            doc: (doc_comment [399, 7] - [400, 0]))
+          (line_comment [400, 4] - [401, 0]
+            outer: (outer_doc_comment_marker [400, 6] - [400, 7])
+            doc: (doc_comment [400, 7] - [401, 0]))
+          (line_comment [401, 4] - [402, 0]
+            outer: (outer_doc_comment_marker [401, 6] - [401, 7])
+            doc: (doc_comment [401, 7] - [402, 0]))
+          (line_comment [402, 4] - [403, 0]
+            outer: (outer_doc_comment_marker [402, 6] - [402, 7])
+            doc: (doc_comment [402, 7] - [403, 0]))
+          (line_comment [403, 4] - [404, 0]
+            outer: (outer_doc_comment_marker [403, 6] - [403, 7])
+            doc: (doc_comment [403, 7] - [404, 0]))
+          (line_comment [404, 4] - [405, 0]
+            outer: (outer_doc_comment_marker [404, 6] - [404, 7])
+            doc: (doc_comment [404, 7] - [405, 0]))
+          (declaration_with_attrs [405, 4] - [427, 5]
+            (function_item [405, 4] - [427, 5]
+              (visibility_modifier [405, 4] - [405, 7])
+              (function_modifiers [405, 8] - [405, 14])
+              name: (identifier [405, 18] - [405, 32])
+              parameters: (parameters [405, 32] - [405, 57]
+                (parameter [405, 33] - [405, 44]
+                  pattern: (identifier [405, 33] - [405, 36])
+                  type: (pointer_type [405, 38] - [405, 44]
+                    (mutable_specifier [405, 39] - [405, 42])
+                    type: (type_identifier [405, 43] - [405, 44])))
+                (parameter [405, 46] - [405, 56]
+                  pattern: (identifier [405, 46] - [405, 49])
+                  type: (primitive_type [405, 51] - [405, 56])))
+              return_type: (named_return_type [405, 61] - [405, 97]
+                (identifier [405, 62] - [405, 68])
+                (generic_type [405, 70] - [405, 96]
+                  type: (type_identifier [405, 70] - [405, 76])
+                  type_arguments: (type_arguments [405, 76] - [405, 96]
+                    (generic_type [405, 77] - [405, 88]
+                      type: (type_identifier [405, 77] - [405, 85])
+                      type_arguments: (type_arguments [405, 85] - [405, 88]
+                        (type_identifier [405, 86] - [405, 87])))
+                    (type_identifier [405, 90] - [405, 95]))))
+              (fn_qualifier [406, 8] - [417, 79]
+                (requires_clause [406, 8] - [410, 81]
+                  (binary_expression [407, 12] - [407, 19]
+                    left: (identifier [407, 12] - [407, 15])
+                    right: (integer_literal [407, 18] - [407, 19]))
+                  (binary_expression [408, 12] - [408, 35]
+                    left: (identifier [408, 12] - [408, 15])
+                    right: (type_cast_expression [408, 18] - [408, 35]
+                      value: (scoped_identifier [408, 18] - [408, 26]
+                        path: (identifier [408, 18] - [408, 21])
+                        name: (identifier [408, 23] - [408, 26]))
+                      type: (primitive_type [408, 30] - [408, 35])))
+                  (binary_expression [409, 12] - [409, 27]
+                    left: (call_expression [409, 12] - [409, 22]
+                      function: (field_expression [409, 12] - [409, 20]
+                        value: (identifier [409, 12] - [409, 15])
+                        field: (field_identifier [409, 16] - [409, 20]))
+                      arguments: (arguments [409, 20] - [409, 22]))
+                    right: (integer_literal [409, 26] - [409, 27]))
+                  (binary_expression [410, 12] - [410, 80]
+                    left: (binary_expression [410, 12] - [410, 59]
+                      left: (call_expression [410, 12] - [410, 22]
+                        function: (field_expression [410, 12] - [410, 20]
+                          value: (identifier [410, 12] - [410, 15])
+                          field: (field_identifier [410, 16] - [410, 20]))
+                        arguments: (arguments [410, 20] - [410, 22]))
+                      right: (binary_expression [410, 25] - [410, 59]
+                        left: (identifier [410, 25] - [410, 28])
+                        right: (call_expression [410, 31] - [410, 59]
+                          function: (generic_function [410, 31] - [410, 57]
+                            function: (scoped_identifier [410, 31] - [410, 52]
+                              path: (scoped_identifier [410, 31] - [410, 43]
+                                path: (identifier [410, 31] - [410, 35])
+                                name: (identifier [410, 37] - [410, 43]))
+                              name: (identifier [410, 45] - [410, 52]))
+                            type_arguments: (type_arguments [410, 54] - [410, 57]
+                              (type_identifier [410, 55] - [410, 56])))
+                          arguments: (arguments [410, 57] - [410, 59]))))
+                    right: (type_cast_expression [410, 63] - [410, 80]
+                      value: (scoped_identifier [410, 63] - [410, 73]
+                        path: (identifier [410, 63] - [410, 68])
+                        name: (identifier [410, 70] - [410, 73]))
+                      type: (primitive_type [410, 77] - [410, 80]))))
+                (ensures_clause [411, 8] - [417, 79]
+                  (binary_expression [412, 12] - [416, 13]
+                    left: (is_expression [412, 12] - [412, 24]
+                      value: (identifier [412, 12] - [412, 18])
+                      variant: (identifier [412, 22] - [412, 24]))
+                    right: (block [412, 29] - [416, 13]
+                      (big_and_expression [413, 16] - [415, 88]
+                        (call_expression [413, 20] - [413, 38]
+                          function: (field_expression [413, 20] - [413, 36]
+                            value: (arrow_expression [413, 20] - [413, 32]
+                              value: (identifier [413, 20] - [413, 26])
+                              field: (field_identifier [413, 28] - [413, 32]))
+                            field: (field_identifier [413, 33] - [413, 36]))
+                          arguments: (arguments [413, 36] - [413, 38]))
+                        (binary_expression [414, 20] - [414, 46]
+                          left: (call_expression [414, 20] - [414, 39]
+                            function: (field_expression [414, 20] - [414, 37]
+                              value: (view_expression [414, 20] - [414, 33]
+                                value: (arrow_expression [414, 20] - [414, 32]
+                                  value: (identifier [414, 20] - [414, 26])
+                                  field: (field_identifier [414, 28] - [414, 32])))
+                              field: (field_identifier [414, 34] - [414, 37]))
+                            arguments: (arguments [414, 37] - [414, 39]))
+                          right: (identifier [414, 43] - [414, 46]))
+                        (quantifier_expression [415, 20] - [415, 88]
+                          (closure_parameters [415, 26] - [415, 34]
+                            (parameter [415, 27] - [415, 33]
+                              pattern: (identifier [415, 27] - [415, 28])
+                              type: (primitive_type [415, 30] - [415, 33])))
+                          body: (binary_expression [415, 35] - [415, 88]
+                            left: (binary_expression [415, 35] - [415, 47]
+                              left: (binary_expression [415, 35] - [415, 41]
+                                left: (integer_literal [415, 35] - [415, 36])
+                                right: (identifier [415, 40] - [415, 41]))
+                              right: (identifier [415, 44] - [415, 47]))
+                            right: (call_expression [415, 52] - [415, 88]
+                              function: (identifier [415, 52] - [415, 59])
+                              arguments: (arguments [415, 59] - [415, 88]
+                                (index_expression [415, 60] - [415, 87]
+                                  (view_expression [415, 60] - [415, 84]
+                                    value: (attribute_expression [415, 60] - [415, 83]
+                                      (attribute_item [415, 60] - [415, 70]
+                                        (trigger_attribute [415, 60] - [415, 70]))
+                                      (arrow_expression [415, 71] - [415, 83]
+                                        value: (identifier [415, 71] - [415, 77])
+                                        field: (field_identifier [415, 79] - [415, 83]))))
+                                  (identifier [415, 85] - [415, 86])))))))))
+                  (binary_expression [417, 12] - [417, 78]
+                    left: (is_expression [417, 12] - [417, 25]
+                      value: (identifier [417, 12] - [417, 18])
+                      variant: (identifier [417, 22] - [417, 25]))
+                    right: (binary_expression [417, 30] - [417, 78]
+                      left: (field_expression [417, 30] - [417, 48]
+                        value: (arrow_expression [417, 30] - [417, 43]
+                          value: (identifier [417, 30] - [417, 36])
+                          field: (field_identifier [417, 38] - [417, 43]))
+                        field: (field_identifier [417, 44] - [417, 48]))
+                      right: (scoped_identifier [417, 52] - [417, 78]
+                        path: (identifier [417, 52] - [417, 61])
+                        name: (identifier [417, 63] - [417, 78]))))))
+              body: (block [418, 4] - [427, 5]
+                (declaration_with_attrs [419, 8] - [419, 95]
+                  (let_declaration [419, 8] - [419, 95]
+                    pattern: (identifier [419, 12] - [419, 19])
+                    type: (generic_type [419, 21] - [419, 39]
+                      type: (type_identifier [419, 21] - [419, 36])
+                      type_arguments: (type_arguments [419, 36] - [419, 39]
+                        (type_identifier [419, 37] - [419, 38])))
+                    value: (unsafe_block [419, 42] - [419, 94]
+                      (block [419, 49] - [419, 94]
+                        (try_expression [419, 51] - [419, 92]
+                          (call_expression [419, 51] - [419, 91]
+                            function: (scoped_identifier [419, 51] - [419, 81]
+                              path: (identifier [419, 51] - [419, 66])
+                              name: (identifier [419, 68] - [419, 81]))
+                            arguments: (arguments [419, 81] - [419, 91]
+                              (identifier [419, 82] - [419, 85])
+                              (identifier [419, 87] - [419, 90]))))))))
+                (declaration_with_attrs [420, 8] - [420, 52]
+                  (let_declaration [420, 8] - [420, 52]
+                    pattern: (identifier [420, 12] - [420, 15])
+                    type: (generic_type [420, 17] - [420, 28]
+                      type: (type_identifier [420, 17] - [420, 25])
+                      type_arguments: (type_arguments [420, 25] - [420, 28]
+                        (type_identifier [420, 26] - [420, 27])))
+                    value: (struct_expression [420, 31] - [420, 51]
+                      name: (type_identifier [420, 31] - [420, 39])
+                      body: (field_initializer_list [420, 40] - [420, 51]
+                        (shorthand_field_initializer [420, 42] - [420, 49]
+                          (identifier [420, 42] - [420, 49]))))))
+                (expression_statement [421, 8] - [425, 9]
+                  (proof_block [421, 8] - [425, 9]
+                    (block [421, 14] - [425, 9]
+                      (line_comment [422, 12] - [422, 65])
+                      (expression_statement [423, 12] - [423, 64]
+                        (assume_expression [423, 12] - [423, 63]
+                          (binary_expression [423, 19] - [423, 62]
+                            left: (call_expression [423, 19] - [423, 29]
+                              function: (field_expression [423, 19] - [423, 27]
+                                value: (view_expression [423, 19] - [423, 23]
+                                  value: (identifier [423, 19] - [423, 22]))
+                                field: (field_identifier [423, 24] - [423, 27]))
+                              arguments: (arguments [423, 27] - [423, 29]))
+                            right: (call_expression [423, 33] - [423, 62]
+                              function: (field_expression [423, 33] - [423, 60]
+                                value: (call_expression [423, 33] - [423, 56]
+                                  function: (field_expression [423, 33] - [423, 54]
+                                    value: (field_expression [423, 33] - [423, 44]
+                                      value: (identifier [423, 33] - [423, 36])
+                                      field: (field_identifier [423, 37] - [423, 44]))
+                                    field: (field_identifier [423, 45] - [423, 54]))
+                                  arguments: (arguments [423, 54] - [423, 56]))
+                                field: (field_identifier [423, 57] - [423, 60]))
+                              arguments: (arguments [423, 60] - [423, 62])))))
+                      (expression_statement [424, 12] - [424, 99]
+                        (assume_expression [424, 12] - [424, 98]
+                          (quantifier_expression [424, 19] - [424, 97]
+                            (closure_parameters [424, 25] - [424, 33]
+                              (parameter [424, 26] - [424, 32]
+                                pattern: (identifier [424, 26] - [424, 27])
+                                type: (primitive_type [424, 29] - [424, 32])))
+                            (inner_attribute_item [424, 34] - [424, 42]
+                              (attribute [424, 37] - [424, 41]
+                                (identifier [424, 37] - [424, 41])))
+                            body: (binary_expression [424, 43] - [424, 97]
+                              left: (binary_expression [424, 43] - [424, 55]
+                                left: (binary_expression [424, 43] - [424, 49]
+                                  left: (integer_literal [424, 43] - [424, 44])
+                                  right: (identifier [424, 48] - [424, 49]))
+                                right: (identifier [424, 52] - [424, 55]))
+                              right: (binary_expression [424, 60] - [424, 97]
+                                left: (index_expression [424, 60] - [424, 67]
+                                  (view_expression [424, 60] - [424, 64]
+                                    value: (identifier [424, 60] - [424, 63]))
+                                  (identifier [424, 65] - [424, 66]))
+                                right: (index_expression [424, 71] - [424, 97]
+                                  (call_expression [424, 71] - [424, 94]
+                                    function: (field_expression [424, 71] - [424, 92]
+                                      value: (field_expression [424, 71] - [424, 82]
+                                        value: (identifier [424, 71] - [424, 74])
+                                        field: (field_identifier [424, 75] - [424, 82]))
+                                      field: (field_identifier [424, 83] - [424, 92]))
+                                    arguments: (arguments [424, 92] - [424, 94]))
+                                  (identifier [424, 95] - [424, 96]))))))))))
+                (call_expression [426, 8] - [426, 15]
+                  function: (identifier [426, 8] - [426, 10])
+                  arguments: (arguments [426, 10] - [426, 15]
+                    (identifier [426, 11] - [426, 14])))))))))
+    (declaration_with_attrs [430, 0] - [446, 1]
+      (impl_item [430, 0] - [446, 1]
+        type_parameters: (type_parameters [430, 4] - [430, 7]
+          (type_parameter [430, 5] - [430, 6]
+            name: (type_identifier [430, 5] - [430, 6])))
+        type: (generic_type [430, 8] - [430, 19]
+          type: (type_identifier [430, 8] - [430, 16])
+          type_arguments: (type_arguments [430, 16] - [430, 19]
+            (type_identifier [430, 17] - [430, 18])))
+        body: (declaration_list [430, 20] - [446, 1]
+          (line_comment [431, 4] - [432, 0]
+            outer: (outer_doc_comment_marker [431, 6] - [431, 7])
+            doc: (doc_comment [431, 7] - [432, 0]))
+          (line_comment [432, 4] - [433, 0]
+            outer: (outer_doc_comment_marker [432, 6] - [432, 7])
+            doc: (doc_comment [432, 7] - [433, 0]))
+          (line_comment [433, 4] - [434, 0]
+            outer: (outer_doc_comment_marker [433, 6] - [433, 7])
+            doc: (doc_comment [433, 7] - [434, 0]))
+          (declaration_with_attrs [434, 4] - [445, 5]
+            (attribute_item [434, 4] - [434, 30]
+              (attribute [434, 6] - [434, 29]
+                (scoped_identifier [434, 6] - [434, 29]
+                  path: (identifier [434, 6] - [434, 14])
+                  name: (identifier [434, 16] - [434, 29]))))
+            (function_item [435, 4] - [445, 5]
+              (visibility_modifier [435, 4] - [435, 7])
+              name: (identifier [435, 11] - [435, 14])
+              parameters: (parameters [435, 14] - [435, 49]
+                (self_parameter [435, 15] - [435, 24]
+                  (mutable_specifier [435, 16] - [435, 19])
+                  (self [435, 20] - [435, 24]))
+                (parameter [435, 26] - [435, 38]
+                  pattern: (identifier [435, 26] - [435, 31])
+                  type: (primitive_type [435, 33] - [435, 38]))
+                (parameter [435, 40] - [435, 48]
+                  pattern: (identifier [435, 40] - [435, 45])
+                  type: (type_identifier [435, 47] - [435, 48])))
+              (fn_qualifier [436, 8] - [442, 46]
+                (requires_clause [436, 8] - [437, 46]
+                  (call_expression [437, 12] - [437, 45]
+                    function: (field_expression [437, 12] - [437, 31]
+                      value: (call_expression [437, 12] - [437, 21]
+                        function: (identifier [437, 12] - [437, 15])
+                        arguments: (arguments [437, 15] - [437, 21]
+                          (self [437, 16] - [437, 20])))
+                      field: (field_identifier [437, 22] - [437, 31]))
+                    arguments: (arguments [437, 31] - [437, 45]
+                      (type_cast_expression [437, 32] - [437, 44]
+                        value: (identifier [437, 32] - [437, 37])
+                        type: (primitive_type [437, 41] - [437, 44])))))
+                (ensures_clause [438, 8] - [442, 46]
+                  (binary_expression [439, 12] - [439, 43]
+                    left: (call_expression [439, 12] - [439, 23]
+                      function: (field_expression [439, 12] - [439, 21]
+                        value: (view_expression [439, 12] - [439, 17]
+                          value: (self [439, 12] - [439, 16]))
+                        field: (field_identifier [439, 18] - [439, 21]))
+                      arguments: (arguments [439, 21] - [439, 23]))
+                    right: (call_expression [439, 27] - [439, 43]
+                      function: (field_expression [439, 27] - [439, 41]
+                        value: (view_expression [439, 27] - [439, 37]
+                          value: (call_expression [439, 27] - [439, 36]
+                            function: (identifier [439, 27] - [439, 30])
+                            arguments: (arguments [439, 30] - [439, 36]
+                              (self [439, 31] - [439, 35]))))
+                        field: (field_identifier [439, 38] - [439, 41]))
+                      arguments: (arguments [439, 41] - [439, 43])))
+                  (binary_expression [440, 12] - [440, 40]
+                    left: (index_expression [440, 12] - [440, 31]
+                      (view_expression [440, 12] - [440, 17]
+                        value: (self [440, 12] - [440, 16]))
+                      (type_cast_expression [440, 18] - [440, 30]
+                        value: (identifier [440, 18] - [440, 23])
+                        type: (primitive_type [440, 27] - [440, 30])))
+                    right: (identifier [440, 35] - [440, 40]))
+                  (quantifier_expression [441, 12] - [442, 45]
+                    (closure_parameters [441, 18] - [441, 26]
+                      (parameter [441, 19] - [441, 25]
+                        pattern: (identifier [441, 19] - [441, 20])
+                        type: (primitive_type [441, 22] - [441, 25])))
+                    body: (binary_expression [441, 27] - [442, 45]
+                      left: (binary_expression [441, 27] - [441, 68]
+                        left: (binary_expression [441, 27] - [441, 47]
+                          left: (binary_expression [441, 27] - [441, 33]
+                            left: (integer_literal [441, 27] - [441, 28])
+                            right: (identifier [441, 32] - [441, 33]))
+                          right: (call_expression [441, 36] - [441, 47]
+                            function: (field_expression [441, 36] - [441, 45]
+                              value: (view_expression [441, 36] - [441, 41]
+                                value: (self [441, 36] - [441, 40]))
+                              field: (field_identifier [441, 42] - [441, 45]))
+                            arguments: (arguments [441, 45] - [441, 47])))
+                        right: (binary_expression [441, 51] - [441, 68]
+                          left: (identifier [441, 51] - [441, 52])
+                          right: (type_cast_expression [441, 56] - [441, 68]
+                            value: (identifier [441, 56] - [441, 61])
+                            type: (primitive_type [441, 65] - [441, 68]))))
+                      right: (binary_expression [442, 20] - [442, 45]
+                        left: (index_expression [442, 20] - [442, 28]
+                          (view_expression [442, 20] - [442, 25]
+                            value: (self [442, 20] - [442, 24]))
+                          (identifier [442, 26] - [442, 27]))
+                        right: (index_expression [442, 32] - [442, 45]
+                          (view_expression [442, 32] - [442, 42]
+                            value: (call_expression [442, 32] - [442, 41]
+                              function: (identifier [442, 32] - [442, 35])
+                              arguments: (arguments [442, 35] - [442, 41]
+                                (self [442, 36] - [442, 40]))))
+                          (identifier [442, 43] - [442, 44])))))))
+              body: (block [443, 4] - [445, 5]
+                (expression_statement [444, 8] - [444, 46]
+                  (assignment_expression [444, 8] - [444, 45]
+                    left: (index_expression [444, 8] - [444, 37]
+                      (call_expression [444, 8] - [444, 30]
+                        function: (field_expression [444, 8] - [444, 28]
+                          value: (field_expression [444, 8] - [444, 20]
+                            value: (self [444, 8] - [444, 12])
+                            field: (field_identifier [444, 13] - [444, 20]))
+                          field: (field_identifier [444, 21] - [444, 28]))
+                        arguments: (arguments [444, 28] - [444, 30]))
+                      (identifier [444, 31] - [444, 36]))
+                    right: (identifier [444, 40] - [444, 45])))))))))
+    (declaration_with_attrs [448, 0] - [458, 1]
+      (impl_item [448, 0] - [458, 1]
+        type_parameters: (type_parameters [448, 4] - [448, 7]
+          (type_parameter [448, 5] - [448, 6]
+            name: (type_identifier [448, 5] - [448, 6])))
+        trait: (type_identifier [448, 8] - [448, 13])
+        type: (generic_type [448, 18] - [448, 29]
+          type: (type_identifier [448, 18] - [448, 26])
+          type_arguments: (type_arguments [448, 26] - [448, 29]
+            (type_identifier [448, 27] - [448, 28])))
+        body: (declaration_list [448, 30] - [458, 1]
+          (declaration_with_attrs [449, 4] - [449, 22]
+            (type_item [449, 4] - [449, 22]
+              name: (type_identifier [449, 9] - [449, 15])
+              type: (array_type [449, 18] - [449, 21]
+                element: (type_identifier [449, 19] - [449, 20]))))
+          (declaration_with_attrs [451, 4] - [457, 5]
+            (attribute_item [451, 4] - [451, 30]
+              (attribute [451, 6] - [451, 29]
+                (scoped_identifier [451, 6] - [451, 29]
+                  path: (identifier [451, 6] - [451, 14])
+                  name: (identifier [451, 16] - [451, 29]))))
+            (function_item [452, 4] - [457, 5]
+              name: (identifier [452, 7] - [452, 12])
+              parameters: (parameters [452, 12] - [452, 19]
+                (self_parameter [452, 13] - [452, 18]
+                  (self [452, 14] - [452, 18])))
+              return_type: (named_return_type [452, 23] - [452, 46]
+                (identifier [452, 24] - [452, 30])
+                (reference_type [452, 32] - [452, 45]
+                  type: (scoped_type_identifier [452, 33] - [452, 45]
+                    path: (identifier [452, 33] - [452, 37])
+                    name: (type_identifier [452, 39] - [452, 45]))))
+              (fn_qualifier [453, 8] - [454, 29]
+                (ensures_clause [453, 8] - [454, 29]
+                  (binary_expression [454, 12] - [454, 28]
+                    left: (view_expression [454, 12] - [454, 19]
+                      value: (identifier [454, 12] - [454, 18]))
+                    right: (view_expression [454, 23] - [454, 28]
+                      value: (self [454, 23] - [454, 27])))))
+              body: (block [455, 4] - [457, 5]
+                (call_expression [456, 8] - [456, 26]
+                  function: (field_expression [456, 8] - [456, 24]
+                    value: (field_expression [456, 8] - [456, 20]
+                      value: (self [456, 8] - [456, 12])
+                      field: (field_identifier [456, 13] - [456, 20]))
+                    field: (field_identifier [456, 21] - [456, 24]))
+                  arguments: (arguments [456, 24] - [456, 26])))))))))
+  (line_comment [460, 2] - [460, 11])
+  (line_comment [462, 0] - [462, 77])
+  (declaration_with_attrs [463, 0] - [467, 1]
+    (impl_item [463, 0] - [467, 1]
+      type_parameters: (type_parameters [463, 4] - [463, 7]
+        (type_parameter [463, 5] - [463, 6]
+          name: (type_identifier [463, 5] - [463, 6])))
+      trait: (type_identifier [463, 8] - [463, 16])
+      type: (generic_type [463, 21] - [463, 32]
+        type: (type_identifier [463, 21] - [463, 29])
+        type_arguments: (type_arguments [463, 29] - [463, 32]
+          (type_identifier [463, 30] - [463, 31])))
+      body: (declaration_list [463, 33] - [467, 1]
+        (declaration_with_attrs [464, 4] - [466, 5]
+          (function_item [464, 4] - [466, 5]
+            name: (identifier [464, 7] - [464, 16])
+            parameters: (parameters [464, 16] - [464, 27]
+              (self_parameter [464, 17] - [464, 26]
+                (mutable_specifier [464, 18] - [464, 21])
+                (self [464, 22] - [464, 26])))
+            return_type: (named_return_type [464, 31] - [464, 48]
+              (reference_type [464, 31] - [464, 48]
+                (mutable_specifier [464, 32] - [464, 35])
+                type: (scoped_type_identifier [464, 36] - [464, 48]
+                  path: (identifier [464, 36] - [464, 40])
+                  name: (type_identifier [464, 42] - [464, 48]))))
+            body: (block [464, 49] - [466, 5]
+              (call_expression [465, 8] - [465, 30]
+                function: (field_expression [465, 8] - [465, 28]
+                  value: (field_expression [465, 8] - [465, 20]
+                    value: (self [465, 8] - [465, 12])
+                    field: (field_identifier [465, 13] - [465, 20]))
+                  field: (field_identifier [465, 21] - [465, 28]))
+                arguments: (arguments [465, 28] - [465, 30]))))))))
+  (declaration_with_attrs [469, 0] - [484, 1]
+    (impl_item [469, 0] - [484, 1]
+      type_parameters: (type_parameters [469, 4] - [469, 7]
+        (type_parameter [469, 5] - [469, 6]
+          name: (type_identifier [469, 5] - [469, 6])))
+      trait: (type_identifier [469, 8] - [469, 12])
+      type: (generic_type [469, 17] - [469, 28]
+        type: (type_identifier [469, 17] - [469, 25])
+        type_arguments: (type_arguments [469, 25] - [469, 28]
+          (type_identifier [469, 26] - [469, 27])))
+      body: (declaration_list [469, 29] - [484, 1]
+        (declaration_with_attrs [470, 4] - [483, 5]
+          (function_item [470, 4] - [483, 5]
+            name: (identifier [470, 7] - [470, 11])
+            parameters: (parameters [470, 11] - [470, 22]
+              (self_parameter [470, 12] - [470, 21]
+                (mutable_specifier [470, 13] - [470, 16])
+                (self [470, 17] - [470, 21])))
+            body: (block [470, 23] - [483, 5]
+              (expression_statement [471, 8] - [482, 9]
+                (match_expression [471, 8] - [482, 9]
+                  value: (reference_expression [471, 14] - [471, 27]
+                    value: (field_expression [471, 15] - [471, 27]
+                      value: (self [471, 15] - [471, 19])
+                      field: (field_identifier [471, 20] - [471, 27])))
+                  body: (match_block [471, 28] - [482, 9]
+                    (match_arm [472, 12] - [480, 14]
+                      pattern: (match_pattern [472, 12] - [472, 49]
+                        (struct_pattern [472, 12] - [472, 49]
+                          type: (scoped_type_identifier [472, 12] - [472, 36]
+                            path: (identifier [472, 12] - [472, 27])
+                            name: (type_identifier [472, 29] - [472, 36]))
+                          (field_pattern [472, 39] - [472, 42]
+                            name: (shorthand_field_identifier [472, 39] - [472, 42]))
+                          (field_pattern [472, 44] - [472, 47]
+                            name: (shorthand_field_identifier [472, 44] - [472, 47]))))
+                      value: (block [472, 53] - [480, 13]
+                        (declaration_with_attrs [473, 16] - [476, 18]
+                          (let_declaration [473, 16] - [476, 18]
+                            pattern: (identifier [473, 20] - [473, 26])
+                            type: (type_identifier [473, 28] - [473, 34])
+                            value: (match_expression [473, 37] - [476, 17]
+                              value: (call_expression [473, 43] - [473, 67]
+                                function: (generic_function [473, 43] - [473, 61]
+                                  function: (scoped_identifier [473, 43] - [473, 56]
+                                    path: (identifier [473, 43] - [473, 49])
+                                    name: (identifier [473, 51] - [473, 56]))
+                                  type_arguments: (type_arguments [473, 58] - [473, 61]
+                                    (type_identifier [473, 59] - [473, 60])))
+                                arguments: (arguments [473, 61] - [473, 67]
+                                  (unary_expression [473, 62] - [473, 66]
+                                    (identifier [473, 63] - [473, 66]))))
+                              body: (match_block [473, 68] - [476, 17]
+                                (match_arm [474, 20] - [474, 41]
+                                  pattern: (match_pattern [474, 20] - [474, 30]
+                                    (tuple_struct_pattern [474, 20] - [474, 30]
+                                      type: (identifier [474, 20] - [474, 22])
+                                      (identifier [474, 23] - [474, 29])))
+                                  value: (identifier [474, 34] - [474, 40]))
+                                (match_arm [475, 20] - [475, 37]
+                                  pattern: (match_pattern [475, 20] - [475, 26]
+                                    (tuple_struct_pattern [475, 20] - [475, 26]
+                                      type: (identifier [475, 20] - [475, 23])))
+                                  value: (return_expression [475, 30] - [475, 36]))))))
+                        (expression_statement [477, 16] - [479, 17]
+                          (unsafe_block [477, 16] - [479, 17]
+                            (block [477, 23] - [479, 17]
+                              (expression_statement [478, 20] - [478, 61]
+                                (call_expression [478, 20] - [478, 60]
+                                  function: (identifier [478, 20] - [478, 27])
+                                  arguments: (arguments [478, 27] - [478, 60]
+                                    (type_cast_expression [478, 28] - [478, 51]
+                                      value: (call_expression [478, 28] - [478, 40]
+                                        function: (field_expression [478, 28] - [478, 38]
+                                          value: (identifier [478, 28] - [478, 31])
+                                          field: (field_identifier [478, 32] - [478, 38]))
+                                        arguments: (arguments [478, 38] - [478, 40]))
+                                      type: (pointer_type [478, 44] - [478, 51]
+                                        (mutable_specifier [478, 45] - [478, 48])
+                                        type: (primitive_type [478, 49] - [478, 51])))
+                                    (identifier [478, 53] - [478, 59])))))))))
+                    (match_arm [481, 12] - [481, 52]
+                      pattern: (match_pattern [481, 12] - [481, 45]
+                        (struct_pattern [481, 12] - [481, 45]
+                          type: (scoped_type_identifier [481, 12] - [481, 38]
+                            path: (identifier [481, 12] - [481, 27])
+                            name: (type_identifier [481, 29] - [481, 38]))
+                          (remaining_field_pattern [481, 41] - [481, 43])))
+                      value: (unit_expression [481, 49] - [481, 51]))))))))))))

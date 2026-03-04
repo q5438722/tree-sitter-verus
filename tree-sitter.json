@@ -1,0 +1,57 @@
+{
+  "grammars": [
+    {
+      "name": "verus",
+      "camelcase": "Verus",
+      "scope": "source.verus",
+      "path": ".",
+      "file-types": [
+        "rs"
+      ],
+      "highlights": [
+        "queries/highlights.scm"
+      ],
+      "injections": [
+        "queries/injections.scm"
+      ],
+      "tags": [
+        "queries/tags.scm"
+      ],
+      "injection-regex": "verus"
+    }
+  ],
+  "metadata": {
+    "version": "0.23.2",
+    "license": "MIT",
+    "description": "Verus grammar for tree-sitter (based on tree-sitter-rust)",
+    "authors": [
+      {
+        "name": "Maxim Sokolov",
+        "email": "maxim0xff@gmail.com"
+      },
+      {
+        "name": "Max Brunsfeld",
+        "email": "maxbrunsfeld@gmail.com"
+      },
+      {
+        "name": "Amaan Qureshi",
+        "email": "amaanq12@gmail.com"
+      },
+      {
+        "name": "Zhengyao Lin",
+        "email": "zhengyal@cmu.edu"
+      }
+    ],
+    "links": {
+      "repository": "https://github.com/secure-foundations/tree-sitter-verus"
+    }
+  },
+  "bindings": {
+    "c": true,
+    "go": true,
+    "node": true,
+    "python": true,
+    "rust": true,
+    "swift": true
+  }
+}
