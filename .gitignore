@@ -40,3 +40,4 @@ dist/
 *.zip
 
 .vscode/
+*.ipynb_checkpoints/

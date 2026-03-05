@@ -112,6 +112,17 @@ class verus_parser:
                 proof_exprs + extra_proof_exprs
         return proofs
     
+    def extract_external(self, program:tree_sitter.Node):
+        query_str = '''
+            (declaration_with_attrs
+                (attribute_item)@attribute_item
+            )@declaration_with_attrs
+            '''
+        declaration_matches = self.match_query(program, query_str)
+        external_declarations = [match['declaration_with_attrs'][0] for match in declaration_matches \
+                                 if 'verifier::external_body' in node_to_text(match['attribute_item'][0])]
+        return external_declarations
+
     def get_tree_hash(self, program:tree_sitter.Node) -> str:
         '''
         Hash(node) = Hash(current_node + cat_{child_node in childs} Hash(child_node))
@@ -168,7 +179,7 @@ class verus_editor:
         for l, r in replace_brackets:
             new_program = new_program[:l] + bytes(target_str, encoding='utf-8') + new_program[r:]
         self.current_program = new_program.decode()
-        self.current_ast = self.vs_parser.parser.parse(bytes(self.current_program, 'utf-8'))
+        self.current_ast = self.vs_parser.parser.parse(bytes(self.current_program, 'utf-8')).root_node
         return self.current_program
 
     def clean_program(self):
@@ -176,79 +187,44 @@ class verus_editor:
                                                             node_types=['empty_statement'])
         self.replace_nodes(empty_nodes, '')
 
-    
-# to be replaced
     def remove_comment(self) -> None:
-        comments = self.vs_parser.extract_comment(self.current_ast.root_node)
+        comments = self.vs_parser.extract_comments(self.current_ast)
         self.replace_nodes(comments, target_str='')
 
-    def remove_proof_with_body(self) -> None:
-        invariants = self.vs_parser.extract_loop_invariant(self.current_ast.root_node)
-        self.replace_nodes(invariants, target_str='')
-
-        decreases = self.vs_parser.extract_decreases(self.current_ast.root_node)
-        self.replace_nodes(decreases, target_str='')
-        
-        proofs = self.vs_parser.extract_proof_block(self.current_ast.root_node)
-        self.replace_nodes(proofs, target_str='')
-
-        assertions = self.vs_parser.extract_assertion(self.current_ast.root_node)
-        self.replace_nodes(assertions, target_str='')
-
-        assumptions = self.vs_parser.extract_assumption(self.current_ast.root_node)
-        self.replace_nodes(assumptions, target_str='')
-
-        admits = self.vs_parser.extract_admits(self.current_ast.root_node)
-        self.replace_nodes(admits, target_str='')
-
-        reveals = self.vs_parser.extract_reveal(self.current_ast.root_node)
-        self.replace_nodes(reveals, target_str='')
-
-        empty_statements = self.vs_parser.extract_empty_statements(self.current_ast.root_node)
-        self.replace_nodes(empty_statements, target_str='')
-
-        proof_fns = self.vs_parser.extract_proof_fn(self.current_ast.root_node)
-        proof_bodies = [fn.child_by_field_name('body') for fn in proof_fns \
-                        if fn.child_by_field_name('body')]
-
-        proof_fn_prompt = '{\n // please add proof here. \n}'
-        self.replace_nodes(proof_bodies, target_str=proof_fn_prompt)
-
+    def remove_specification(self) -> None:
+        specifications = self.vs_parser.extract_specifications(self.current_ast)
+        self.replace_nodes(specifications, target_str='')
+    
     def remove_proof(self) -> None:
-        proof_fns = self.vs_parser.extract_proof_fn(self.current_ast.root_node)
-        self.replace_nodes(proof_fns, target_str='')
-
-        invariants = self.vs_parser.extract_loop_invariant(self.current_ast.root_node)
-        self.replace_nodes(invariants, target_str='')
-
-        decreases = self.vs_parser.extract_decreases(self.current_ast.root_node)
-        self.replace_nodes(decreases, target_str='')
-
-        proofs = self.vs_parser.extract_proof_block(self.current_ast.root_node)
+        proofs = self.vs_parser.extract_proofs(self.current_ast)
         self.replace_nodes(proofs, target_str='')
 
-        assertions = self.vs_parser.extract_assertion(self.current_ast.root_node)
-        self.replace_nodes(assertions, target_str='')
-
-        assumptions = self.vs_parser.extract_assumption(self.current_ast.root_node)
-        self.replace_nodes(assumptions, target_str='')
-
-        admits = self.vs_parser.extract_admits(self.current_ast.root_node)
-        self.replace_nodes(admits, target_str='')
-
-        reveals = self.vs_parser.extract_reveal(self.current_ast.root_node)
-        self.replace_nodes(reveals, target_str='')
-
-        empty_statements = self.vs_parser.extract_empty_statements(self.current_ast.root_node)
-        self.replace_nodes(empty_statements, target_str='')
+    def remove_external(self) -> None:
+        external_declarations = self.vs_parser.extract_external(self.current_ast)
+        self.replace_nodes(external_declarations, target_str='')
 
     def remove_body(self) -> None:
-        functions = self.vs_parser.extract_raw_function(self.current_ast.root_node)
+        functions = self.vs_parser.extract_functions(self.current_ast)
         bodies = [fn.child_by_field_name('body') for fn in functions if 'fn main()' not in node_to_text(fn)]
+        bodies = [b for b in bodies if b is not None]
         self.replace_nodes(bodies, target_str='{\n // please add implementation and proof here. \n}')
 
+def spec_compatible(src_prog:str, dst_prog:str, language_path:str) -> bool:
+    src_editor = verus_editor(src_prog, language_path)
+    src_editor.remove_proof()
+    src_editor.remove_comment()
+    src_editor.remove_external()
+    src_hash = src_editor.vs_parser.get_tree_hash(src_editor.current_ast)
 
+    dst_editor = verus_editor(dst_prog, language_path)
+    dst_editor.remove_proof()
+    dst_editor.remove_comment()
+    dst_editor.remove_external()
+    dst_hash = dst_editor.vs_parser.get_tree_hash(dst_editor.current_ast)
 
+    return src_hash == dst_hash
+
+# tbd
 def verified_storage_pipeline():
     folder = '/home/v-tianychen/Verus_Copilot/benchmarks/verified-storage/benchmarks'
     files = []
@@ -264,10 +240,6 @@ def verified_storage_pipeline():
                 test_rs = f.read()
             editor = verus_editor(test_rs)
             editor.remove_proof_with_body()
+            editor.remove_external()
             storage_benchs.append({'name': file_path, 'input': editor.current_program, 'output': test_rs})
     dump_json(storage_benchs, '/home/v-tianychen/data/append/verified_storage_1209.json')
-
-
-
-if __name__ == '__main__':
-    return
