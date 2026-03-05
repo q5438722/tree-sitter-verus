@@ -9,12 +9,18 @@ fn main() {
 }
 
 verus! {
-
+/* wow
+ * www
+ * say something
+*/
+    
 spec fn is_digit_sepc(c: u8) -> bool {
     c >= 48 && c <= 57
 }
 
 fn is_digit(c: u8) -> (res: bool)
+    requires
+        c > 0,
     ensures
         res == is_digit_sepc(c),
 {
