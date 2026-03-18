@@ -3,9 +3,11 @@ import ctypes
 import hashlib
 
 from tqdm import tqdm
-from utils import *
 import tree_sitter
 from tree_sitter import Language, Parser, QueryCursor, Query
+
+def node_to_text(node) -> str:
+    return node.text.decode()
 
 class verus_parser:
     def __init__(self, language_path:str) -> None:
