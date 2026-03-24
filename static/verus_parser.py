@@ -54,6 +54,29 @@ class verus_parser:
             target_functions.append(declaration)
         return target_functions
 
+    def extract_exec_functions(self, program:tree_sitter.Node, skip_external=False):
+        query_str = '''
+            (declaration_with_attrs
+                (function_item)@function_item
+            )@declaration_with_attrs
+            '''
+        declaration_matches = self.match_query(program, query_str)
+
+        target_functions = []
+        for match in declaration_matches:
+            declaration = match['declaration_with_attrs'][0]
+            function = match['function_item'][0]
+            attributes = [child for child in declaration.children \
+                          if child.type == 'attribute_item']
+            if skip_external and any('verifier::external_body' in node_to_text(attr) for attr in attributes):
+                continue
+            function_modes = [node_to_text(child) for child in function.children \
+                          if child.type == 'function_mode']
+            if any(item in ['proof', 'spec'] for item in function_modes):
+                continue
+            target_functions.append(declaration)
+        return target_functions
+
     def extract_comments(self, program:tree_sitter.Node):
         query_str = '(block_comment)@block_comment (line_comment)@line_comment'
         comment_captures = self.capture_query(program, query_str)
