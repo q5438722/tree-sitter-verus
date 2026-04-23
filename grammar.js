@@ -342,8 +342,45 @@ module.exports = grammar({
       ']',
     ),
 
+    // Verus - verus_spec attribute
+    // Matches #[verus_spec(...)], #![verus_spec(...)],
+    // and #[cfg_attr(cond, verus_spec(...))]
+    verus_spec_attribute: $ => $verus(seq(
+      '#',
+      optional('!'),
+      '[',
+      choice(
+        $.verus_spec_attr,
+        $.cfg_attr_verus_spec,
+      ),
+      ']',
+    )),
+
+    cfg_attr_verus_spec: $ => $verus(seq(
+      'cfg_attr',
+      '(',
+      field('condition', $.identifier),
+      ',',
+      $.verus_spec_attr,
+      optional(','),
+      ')',
+    )),
+
+    verus_spec_attr: $ => $verus(seq(
+      'verus_spec',
+      optional(seq(
+        '(',
+        optional(seq(
+          optional(seq($._pattern, optional(seq(':', $._type)), '=>')),
+          optional($.fn_qualifier),
+        )),
+        ')',
+      )),
+    )),
+
     attribute_item: $ => choice(
       prec(1, $.trigger_attribute),
+      prec(1, $.verus_spec_attribute),
       seq(
         '#',
         '[',
@@ -354,6 +391,7 @@ module.exports = grammar({
 
     inner_attribute_item: $ => choice(
       prec(1, $.trigger_attribute),
+      prec(1, $.verus_spec_attribute),
       seq(
         '#',
         '!',

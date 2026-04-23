@@ -1035,6 +1035,10 @@
         {
           "type": "trigger_attribute",
           "named": true
+        },
+        {
+          "type": "verus_spec_attribute",
+          "named": true
         }
       ]
     }
@@ -1715,6 +1719,32 @@
       "types": [
         {
           "type": "_pattern",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "cfg_attr_verus_spec",
+    "named": true,
+    "fields": {
+      "condition": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "identifier",
+            "named": true
+          }
+        ]
+      }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "verus_spec_attr",
           "named": true
         }
       ]
@@ -3360,6 +3390,10 @@
         },
         {
           "type": "trigger_attribute",
+          "named": true
+        },
+        {
+          "type": "verus_spec_attribute",
           "named": true
         }
       ]
@@ -6037,6 +6071,48 @@
     }
   },
   {
+    "type": "verus_spec_attr",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "_pattern",
+          "named": true
+        },
+        {
+          "type": "_type",
+          "named": true
+        },
+        {
+          "type": "fn_qualifier",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "verus_spec_attribute",
+    "named": true,
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "cfg_attr_verus_spec",
+          "named": true
+        },
+        {
+          "type": "verus_spec_attr",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
     "type": "view_expression",
     "named": true,
     "fields": {
@@ -6540,6 +6616,10 @@
     "named": false
   },
   {
+    "type": "cfg_attr",
+    "named": false
+  },
+  {
     "type": "char_literal",
     "named": true
   },
@@ -6913,6 +6993,10 @@
   },
   {
     "type": "verus",
+    "named": false
+  },
+  {
+    "type": "verus_spec",
     "named": false
   },
   {
