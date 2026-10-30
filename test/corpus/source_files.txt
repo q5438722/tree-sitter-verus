@@ -182,8 +182,9 @@ let x; // <- immediate item after an empty line doc comment
   (line_comment
     (outer_doc_comment_marker)
     (doc_comment))
-  (let_declaration
-    (identifier))
+  (declaration_with_attrs
+    (let_declaration
+      (identifier)))
   (line_comment)
   (block_comment)
   (block_comment))
@@ -210,14 +211,18 @@ const ψ_2 : Ψ = 1;
 ---
 
 (source_file
-  (const_item
-    (identifier)
-    (type_identifier)
-    (integer_literal))
-  (const_item
-    (identifier)
-    (type_identifier)
-    (integer_literal)))
+  (declaration_with_attrs
+    (const_item
+      (identifier)
+      (type_identifier)
+      (const_assign_or_spec
+        (integer_literal))))
+  (declaration_with_attrs
+    (const_item
+      (identifier)
+      (type_identifier)
+      (const_assign_or_spec
+        (integer_literal)))))
 
 ================================================================================
 Shebang line containing spaces
@@ -241,10 +246,11 @@ fn main() {}
 
 (source_file
   (shebang)
-  (function_item
-    (identifier)
-    (parameters)
-    (block)))
+  (declaration_with_attrs
+    (function_item
+      (identifier)
+      (parameters)
+      (block))))
 
 ================================================================================
 Immediate inner attribute
@@ -256,12 +262,14 @@ fn main() {}
 --------------------------------------------------------------------------------
 
 (source_file
-  (inner_attribute_item
-    (attribute
+  (declaration_with_attrs
+    (inner_attribute_item
+      (attribute
+        (identifier)
+        (token_tree
+          (identifier)))))
+  (declaration_with_attrs
+    (function_item
       (identifier)
-      (token_tree
-        (identifier))))
-  (function_item
-    (identifier)
-    (parameters)
-    (block)))
+      (parameters)
+      (block))))

@@ -11,21 +11,24 @@ async fn main() {
 --------------------------------------------------------------------------------
 
 (source_file
-  (function_item
-    (function_modifiers)
-    (identifier)
-    (parameters)
-    (block))
-  (function_item
-    (function_modifiers)
-    (identifier)
-    (parameters)
-    (block
-      (let_declaration
-        (identifier)
-        (try_expression
-          (await_expression
-            (identifier)))))))
+  (declaration_with_attrs
+    (function_item
+      (function_modifiers)
+      (identifier)
+      (parameters)
+      (block)))
+  (declaration_with_attrs
+    (function_item
+      (function_modifiers)
+      (identifier)
+      (parameters)
+      (block
+        (declaration_with_attrs
+          (let_declaration
+            (identifier)
+            (try_expression
+              (await_expression
+                (identifier)))))))))
 
 ================================================================================
 Await expression
@@ -80,9 +83,10 @@ async move {}
   (expression_statement
     (async_block
       (block
-        (let_declaration
-          (identifier)
-          (integer_literal)))))
+        (declaration_with_attrs
+          (let_declaration
+            (identifier)
+            (integer_literal))))))
   (expression_statement
     (async_block
       (block))))
@@ -118,9 +122,10 @@ gen move {}
   (expression_statement
     (gen_block
       (block
-        (let_declaration
-          (identifier)
-          (integer_literal)))))
+        (declaration_with_attrs
+          (let_declaration
+            (identifier)
+            (integer_literal))))))
   (expression_statement
     (gen_block
       (block

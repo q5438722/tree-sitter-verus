@@ -17,8 +17,9 @@
 ; method definitions
 
 (declaration_list
-    (function_item
-        name: (identifier) @name) @definition.method)
+    (declaration_with_attrs
+        (function_item
+            name: (identifier) @name) @definition.method))
 
 ; function definitions
 
