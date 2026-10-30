@@ -1458,7 +1458,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": true,
+      "required": false,
       "types": [
         {
           "type": "crate",
@@ -4269,7 +4269,37 @@
   {
     "type": "publish",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": false,
+      "types": [
+        {
+          "type": "crate",
+          "named": true
+        },
+        {
+          "type": "identifier",
+          "named": true
+        },
+        {
+          "type": "metavariable",
+          "named": true
+        },
+        {
+          "type": "scoped_identifier",
+          "named": true
+        },
+        {
+          "type": "self",
+          "named": true
+        },
+        {
+          "type": "super",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "qualified_type",
@@ -6596,6 +6626,10 @@
     "named": false
   },
   {
+    "type": "axiom",
+    "named": false
+  },
+  {
     "type": "block",
     "named": false
   },
@@ -6978,6 +7012,10 @@
   {
     "type": "type_identifier",
     "named": true
+  },
+  {
+    "type": "uninterp",
+    "named": false
   },
   {
     "type": "union",

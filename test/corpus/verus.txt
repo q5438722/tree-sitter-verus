@@ -1,0 +1,449 @@
+================================================================================
+Uninterpreted spec function
+================================================================================
+
+verus! {
+pub uninterp spec fn f(x: int) -> int;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (function_signature_item
+        (visibility_modifier)
+        (publish)
+        (function_mode)
+        (identifier)
+        (parameters
+          (parameter
+            (identifier)
+            (primitive_type)))
+        (named_return_type
+          (primitive_type))))))
+
+================================================================================
+Uninterpreted spec method without visibility
+================================================================================
+
+verus! {
+impl S {
+    uninterp spec fn marshal(self) -> Value;
+}
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (impl_item
+        (type_identifier)
+        (declaration_list
+          (declaration_with_attrs
+            (function_signature_item
+              (publish)
+              (function_mode)
+              (identifier)
+              (parameters
+                (self_parameter
+                  (self)))
+              (named_return_type
+                (type_identifier)))))))))
+
+================================================================================
+Axiom function
+================================================================================
+
+verus! {
+pub axiom fn ax()
+    ensures
+        true,
+;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (function_signature_item
+        (visibility_modifier)
+        (function_mode)
+        (identifier)
+        (parameters)
+        (fn_qualifier
+          (ensures_clause
+            (boolean_literal)))))))
+
+================================================================================
+Broadcast axiom function
+================================================================================
+
+verus! {
+pub broadcast axiom fn array_len_matches_n<T, const N: usize>(ar: &[T; N])
+    ensures
+        (#[trigger] ar@.len()) == N,
+;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (function_signature_item
+        (visibility_modifier)
+        (function_mode)
+        (identifier)
+        (type_parameters
+          (type_parameter
+            (type_identifier))
+          (const_parameter
+            (identifier)
+            (primitive_type)))
+        (parameters
+          (parameter
+            (identifier)
+            (reference_type
+              (array_type
+                (type_identifier)
+                (identifier)))))
+        (fn_qualifier
+          (ensures_clause
+            (binary_expression
+              (parenthesized_expression
+                (call_expression
+                  (field_expression
+                    (view_expression
+                      (attribute_expression
+                        (attribute_item
+                          (trigger_attribute))
+                        (identifier)))
+                    (field_identifier))
+                  (arguments)))
+              (identifier))))))))
+
+================================================================================
+Restricted open spec functions
+================================================================================
+
+verus! {
+pub open(crate) spec fn a() -> int { 1 }
+pub open(super) spec fn b() -> int { 2 }
+pub open(in crate::m) spec fn c() -> int { 3 }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (function_item
+        (visibility_modifier)
+        (publish
+          (crate))
+        (function_mode)
+        (identifier)
+        (parameters)
+        (named_return_type
+          (primitive_type))
+        (block
+          (integer_literal))))
+    (declaration_with_attrs
+      (function_item
+        (visibility_modifier)
+        (publish
+          (super))
+        (function_mode)
+        (identifier)
+        (parameters)
+        (named_return_type
+          (primitive_type))
+        (block
+          (integer_literal))))
+    (declaration_with_attrs
+      (function_item
+        (visibility_modifier)
+        (publish
+          (scoped_identifier
+            (crate)
+            (identifier)))
+        (function_mode)
+        (identifier)
+        (parameters)
+        (named_return_type
+          (primitive_type))
+        (block
+          (integer_literal))))))
+
+================================================================================
+Outer cfg_attr attribute
+================================================================================
+
+#[cfg_attr(verus_keep_ghost, verifier::verus_macro)]
+fn f() {}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (declaration_with_attrs
+    (attribute_item
+      (attribute
+        (identifier)
+        (token_tree
+          (identifier)
+          (identifier)
+          (identifier))))
+    (function_item
+      (identifier)
+      (parameters)
+      (block))))
+
+================================================================================
+Inner cfg_attr attribute
+================================================================================
+
+#![cfg_attr(not(feature = "std"), no_std)]
+fn f() {}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (declaration_with_attrs
+    (inner_attribute_item
+      (attribute
+        (identifier)
+        (token_tree
+          (identifier)
+          (token_tree
+            (identifier)
+            (string_literal
+              (string_content)))
+          (identifier)))))
+  (declaration_with_attrs
+    (function_item
+      (identifier)
+      (parameters)
+      (block))))
+
+================================================================================
+cfg_attr attribute inside verus block
+================================================================================
+
+verus! {
+#[cfg_attr(verus_keep_ghost, verifier::external_body)]
+pub fn f() {}
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (attribute_item
+        (attribute
+          (identifier)
+          (token_tree
+            (identifier)
+            (identifier)
+            (identifier))))
+      (function_item
+        (visibility_modifier)
+        (identifier)
+        (parameters)
+        (block)))))
+
+================================================================================
+cfg_attr verus_spec attribute
+================================================================================
+
+#[cfg_attr(verus_keep_ghost, verus_spec(r => ensures r == 1))]
+fn f() -> u8 { 1 }
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (declaration_with_attrs
+    (attribute_item
+      (verus_spec_attribute
+        (cfg_attr_verus_spec
+          (identifier)
+          (verus_spec_attr
+            (identifier)
+            (fn_qualifier
+              (ensures_clause
+                (binary_expression
+                  (identifier)
+                  (integer_literal))))))))
+    (function_item
+      (identifier)
+      (parameters)
+      (named_return_type
+        (primitive_type))
+      (block
+        (integer_literal)))))
+
+================================================================================
+Braced broadcast use
+================================================================================
+
+verus! {
+broadcast use {group_a, m::lemma_b,};
+proof fn p() {
+    broadcast use {group_c};
+}
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (broadcast_use
+        (identifier)
+        (scoped_identifier
+          (identifier)
+          (identifier))))
+    (declaration_with_attrs
+      (function_item
+        (function_mode)
+        (identifier)
+        (parameters)
+        (block
+          (declaration_with_attrs
+            (broadcast_use
+              (identifier))))))))
+
+================================================================================
+Unbraced broadcast use
+================================================================================
+
+verus! {
+broadcast use a::b;
+broadcast use c, d;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (verus_block
+    (declaration_with_attrs
+      (broadcast_use
+        (scoped_identifier
+          (identifier)
+          (identifier))))
+    (declaration_with_attrs
+      (broadcast_use
+        (identifier)
+        (identifier)))))
+
+================================================================================
+New Verus keywords remain identifiers
+================================================================================
+
+fn axiom() {}
+fn uninterp() {}
+struct S { axiom: u8, uninterp: u8 }
+fn g(s: S) -> u8 {
+    let axiom = s.axiom;
+    m!(axiom uninterp cfg_attr);
+    a::uninterp::h();
+    axiom + s.uninterp
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (declaration_with_attrs
+    (function_item
+      (identifier)
+      (parameters)
+      (block)))
+  (declaration_with_attrs
+    (function_item
+      (identifier)
+      (parameters)
+      (block)))
+  (declaration_with_attrs
+    (struct_item
+      (type_identifier)
+      (field_declaration_list
+        (field_declaration
+          (field_identifier)
+          (primitive_type))
+        (field_declaration
+          (field_identifier)
+          (primitive_type)))))
+  (declaration_with_attrs
+    (function_item
+      (identifier)
+      (parameters
+        (parameter
+          (identifier)
+          (type_identifier)))
+      (named_return_type
+        (primitive_type))
+      (block
+        (declaration_with_attrs
+          (let_declaration
+            (identifier)
+            (field_expression
+              (identifier)
+              (field_identifier))))
+        (expression_statement
+          (macro_invocation
+            (identifier)
+            (token_tree
+              (identifier)
+              (identifier)
+              (identifier))))
+        (expression_statement
+          (call_expression
+            (scoped_identifier
+              (scoped_identifier
+                (identifier)
+                (identifier))
+              (identifier))
+            (arguments)))
+        (binary_expression
+          (identifier)
+          (field_expression
+            (identifier)
+            (field_identifier)))))))
+
+================================================================================
+New Verus keywords as statement-initial identifiers
+================================================================================
+
+fn g(s: S) -> u8 {
+    h();
+    axiom();
+    uninterp + axiom
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (declaration_with_attrs
+    (function_item
+      (identifier)
+      (parameters
+        (parameter
+          (identifier)
+          (type_identifier)))
+      (named_return_type
+        (primitive_type))
+      (block
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments)))
+        (expression_statement
+          (call_expression
+            (identifier)
+            (arguments)))
+        (binary_expression
+          (identifier)
+          (identifier))))))

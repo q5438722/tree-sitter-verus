@@ -162,6 +162,9 @@ module.exports = grammar({
 
     // TODO: These conflict on #![trigger ...] and #[trigger ...]
     [$.attribute_item, $.inner_attribute_item],
+
+    // `#[cfg_attr(cond, ...` is a verus_spec attribute only if `verus_spec` follows.
+    [$.cfg_attr_verus_spec, $._non_delim_token],
   ],
 
   word: $ => $.identifier,
@@ -401,8 +404,10 @@ module.exports = grammar({
       ),
     ),
 
+    // `cfg_attr` is a keyword because of `cfg_attr_verus_spec`; any other
+    // `#[cfg_attr(...)]` is an ordinary attribute with that path.
     attribute: $ => seq(
-      $._path,
+      choice($._path, alias('cfg_attr', $.identifier)),
       optional(choice(
         seq('=', field('value', $._expression)),
         field('arguments', alias($.delim_token_tree, $.token_tree)),
@@ -454,8 +459,10 @@ module.exports = grammar({
     broadcast_use: $ => seq(
       'broadcast',
       'use',
-      sepBy1(',', $._path),
-      optional(','),
+      choice(
+        seq(sepBy1(',', $._path), optional(',')),
+        seq('{', sepBy(',', $._path), optional(','), '}'),
+      ),
       ';',
     ),
 
@@ -660,16 +667,22 @@ module.exports = grammar({
       ';',
     ),
 
+    // `axiom fn` is a trusted, bodiless proof function (Verus FnMode::ProofAxiom).
     function_mode: $ => choice(
       'spec',
       'proof',
       'exec',
+      'axiom',
       seq('spec', '(', 'checked', ')'),
     ),
 
+    // Verus Publish: `closed`, `open`, `open(crate|self|super|in path)`, or
+    // `uninterp` (an uninterpreted, bodiless spec function).
     publish: $ => choice(
       'closed',
       'open',
+      seq('open', '(', choice($.crate, $.self, $.super, seq('in', $._path)), ')'),
+      'uninterp',
     ),
 
     data_mode: $ => choice(
@@ -2208,10 +2221,14 @@ module.exports = grammar({
 
     shebang: _ => /#![\r\f\t\v ]*([^\[\n].*)?\n/,
 
+    // Contextual keywords that remain ordinary identifiers elsewhere
+    // (`axiom` / `uninterp` only start Verus function declarations).
     _reserved_identifier: $ => alias(choice(
       'default',
       'union',
       'gen',
+      'axiom',
+      'uninterp',
     ), $.identifier),
 
     _type_identifier: $ => alias($.identifier, $.type_identifier),
